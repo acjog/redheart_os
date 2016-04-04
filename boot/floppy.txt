@@ -1,0 +1,518 @@
+这是从bois读盘时，复制过来的，非常有用!:)
+00012751211d[VGA  ] 8-bit write to 03d5 = 04
+00012751303d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0          ---------->   int 10h  ah = 4 al = 0 读光笔的位置
+00012751922d[VGA  ] 8-bit write to 03d4 = 0e
+00012751943d[VGA  ] 8-bit write to 03d5 = 05
+00012751959d[VGA  ] 8-bit write to 03d4 = 0f
+00012751978d[VGA  ] 8-bit write to 03d5 = 05
+00012752070d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012752689d[VGA  ] 8-bit write to 03d4 = 0e
+00012752710d[VGA  ] 8-bit write to 03d5 = 05
+00012752726d[VGA  ] 8-bit write to 03d4 = 0f
+00012752745d[VGA  ] 8-bit write to 03d5 = 06
+00012752837d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012753456d[VGA  ] 8-bit write to 03d4 = 0e
+00012753477d[VGA  ] 8-bit write to 03d5 = 05
+00012753493d[VGA  ] 8-bit write to 03d4 = 0f
+00012753512d[VGA  ] 8-bit write to 03d5 = 07
+00012753604d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012754223d[VGA  ] 8-bit write to 03d4 = 0e
+00012754244d[VGA  ] 8-bit write to 03d5 = 05
+00012754260d[VGA  ] 8-bit write to 03d4 = 0f
+00012754279d[VGA  ] 8-bit write to 03d5 = 08
+00012754371d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012754990d[VGA  ] 8-bit write to 03d4 = 0e
+00012755011d[VGA  ] 8-bit write to 03d5 = 05
+00012755027d[VGA  ] 8-bit write to 03d4 = 0f
+00012755046d[VGA  ] 8-bit write to 03d5 = 09
+00012755138d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012755757d[VGA  ] 8-bit write to 03d4 = 0e
+00012755778d[VGA  ] 8-bit write to 03d5 = 05
+00012755794d[VGA  ] 8-bit write to 03d4 = 0f
+00012755813d[VGA  ] 8-bit write to 03d5 = 0a
+00012755905d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012756524d[VGA  ] 8-bit write to 03d4 = 0e
+00012756545d[VGA  ] 8-bit write to 03d5 = 05
+00012756561d[VGA  ] 8-bit write to 03d4 = 0f
+00012756580d[VGA  ] 8-bit write to 03d5 = 0b
+00012756672d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012757291d[VGA  ] 8-bit write to 03d4 = 0e
+00012757312d[VGA  ] 8-bit write to 03d5 = 05
+00012757328d[VGA  ] 8-bit write to 03d4 = 0f
+00012757347d[VGA  ] 8-bit write to 03d5 = 0c
+00012757439d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012758058d[VGA  ] 8-bit write to 03d4 = 0e
+00012758079d[VGA  ] 8-bit write to 03d5 = 05
+00012758095d[VGA  ] 8-bit write to 03d4 = 0f
+00012758114d[VGA  ] 8-bit write to 03d5 = 0d
+00012758315d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012758934d[VGA  ] 8-bit write to 03d4 = 0e
+00012758955d[VGA  ] 8-bit write to 03d5 = 05
+00012758971d[VGA  ] 8-bit write to 03d4 = 0f
+00012758990d[VGA  ] 8-bit write to 03d5 = 0e
+00012759073d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012759692d[VGA  ] 8-bit write to 03d4 = 0e
+00012759713d[VGA  ] 8-bit write to 03d5 = 05
+00012759729d[VGA  ] 8-bit write to 03d4 = 0f
+00012759748d[VGA  ] 8-bit write to 03d5 = 0f
+00012759831d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012760450d[VGA  ] 8-bit write to 03d4 = 0e
+00012760471d[VGA  ] 8-bit write to 03d5 = 05
+00012760487d[VGA  ] 8-bit write to 03d4 = 0f
+00012760506d[VGA  ] 8-bit write to 03d5 = 10
+00012760589d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012761208d[VGA  ] 8-bit write to 03d4 = 0e
+00012761229d[VGA  ] 8-bit write to 03d5 = 05
+00012761245d[VGA  ] 8-bit write to 03d4 = 0f
+00012761264d[VGA  ] 8-bit write to 03d5 = 11
+00012761347d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012761966d[VGA  ] 8-bit write to 03d4 = 0e
+00012761987d[VGA  ] 8-bit write to 03d5 = 05
+00012762003d[VGA  ] 8-bit write to 03d4 = 0f
+00012762022d[VGA  ] 8-bit write to 03d5 = 12
+00012762105d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012762724d[VGA  ] 8-bit write to 03d4 = 0e
+00012762745d[VGA  ] 8-bit write to 03d5 = 05
+00012762761d[VGA  ] 8-bit write to 03d4 = 0f
+00012762780d[VGA  ] 8-bit write to 03d5 = 13
+00012762958d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012763577d[VGA  ] 8-bit write to 03d4 = 0e
+00012763598d[VGA  ] 8-bit write to 03d5 = 05
+00012763614d[VGA  ] 8-bit write to 03d4 = 0f
+00012763633d[VGA  ] 8-bit write to 03d5 = 14
+00012763725d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012764344d[VGA  ] 8-bit write to 03d4 = 0e
+00012764365d[VGA  ] 8-bit write to 03d5 = 05
+00012764381d[VGA  ] 8-bit write to 03d4 = 0f
+00012764400d[VGA  ] 8-bit write to 03d5 = 15
+00012764492d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012765111d[VGA  ] 8-bit write to 03d4 = 0e
+00012765132d[VGA  ] 8-bit write to 03d5 = 05
+00012765148d[VGA  ] 8-bit write to 03d4 = 0f                         ------------->  猜测这里  CPU0  指单核CPU0 VGA指视频控制器  3d4h 为操作端口
+00012765167d[VGA  ] 8-bit write to 03d5 = 16
+00012765258d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012765532d[PIT  ] entering timer handler                     ------------> 设置时钟定时器  set timer :)
+00012765532d[PIT81] clock_all:  cycles=4294  ---> 初始值 刚开始是一个随机值
+00012765532d[PIT  ] RESETting timer          ---> 重置定时器
+00012765532d[PIT  ] deactivated timer
+00012765532d[PIT  ] activated timer
+00012765532d[PIT  ] s.last_usec=3191383
+00012765532d[PIT  ] s.timer_id=1
+00012765532d[PIT  ] s.timer.get_next_event_time=eae2
+00012765532d[PIT  ] s.last_next_event_time=60130
+00012765536d[PIT  ] entering timer handler
+00012765536d[PIT81] clock_all:  cycles=1
+00012765536d[PIT  ] RESETting timer                              --------------> 设定的时间到了  重新设置定时器
+00012765536d[PIT  ] deactivated timer
+00012765536d[PIT  ] activated timer
+00012765536d[PIT  ] s.last_usec=3191384
+00012765536d[PIT  ] s.timer_id=1
+00012765536d[PIT  ] s.timer.get_next_event_time=eae1
+00012765536d[PIT  ] s.last_next_event_time=60129
+00012765810d[VGA  ] 8-bit write to 03d4 = 0e
+00012765831d[VGA  ] 8-bit write to 03d5 = 05
+00012765847d[VGA  ] 8-bit write to 03d4 = 0f
+00012765866d[VGA  ] 8-bit write to 03d5 = 00
+00012765902d[CPU0 ] interrupt(): vector = 10, TYPE = 4, EXT = 0
+00012766453d[VGA  ] 8-bit write to 03d4 = 0e
+00012766474d[VGA  ] 8-bit write to 03d5 = 05
+00012766490d[VGA  ] 8-bit write to 03d4 = 0f
+00012766509d[VGA  ] 8-bit write to 03d5 = 50
+00012766604d[CPU0 ] interrupt(): vector = 13, TYPE = 4, EXT = 0     -----------> 这里是读扇区函数 即指令0x13  ah = 4  al = 0 查阅pc中断大全 此中断为核对磁盘扇区
+00012766738d[CMOS ] CMOS write to address: 0x0070 = 0x10
+00012766739d[CMOS ] CMOS read of CMOS register 0x10
+00012766878d[FDD  ] read(): during command 0x00, port 0x03f2 returns 0x0c         
+00012766909d[FDD  ] write access to port 0x03f2, value=0x1c--------->3f2h为 DOR 1ch  |motor D\ motor C\ motor B\ motor A\ allow int \ start FDC \floppy sel (2bit)| 
+00012766909d[FDD  ] io_write: digital output register
+00012766909d[FDD  ]   motor on, drive1 = 0
+00012766909d[FDD  ]   motor on, drive0 = 1                ----->  开启软盘驱动器A的电动机
+00012766909d[FDD  ]   dma_and_interrupt_enable=08         ----->  允许DMA和中断请求
+00012766909d[FDD  ]   normal_operation=04                 ----->  启动FDC 软驱有命令字的低两位指定
+00012766909d[FDD  ]   drive_select=00                     ----->  选定软驱A
+00012766945d[FDD  ] read(): during command 0x00, port 0x03f4 returns 0x80 --->读状态信息|数据口就绪\传送方向\非dma方式\fdc忙\软驱D忙~软驱A忙|
+00012766975d[FDD  ] write access to port 0x03f5, value=0x07    ----->
+ 00012766975d[FDD  ] command = 0x07
+00012766975d[FDD  ] io_write: diskette controller data
+00012766991d[FDD  ] write access to port 0x03f5, value=0x00   ---->   数据寄存器 00h   
+00012766991d[FDD  ] command = 0x00
+00012766991d[FDD  ] COMMAND: [07] [00]                   ------>  数据寄存器 07h  FD_RECALIBRATE  校正磁头 (退回0磁道)
+00012766991d[FDD  ] floppy_command(): recalibrate drive 0    ----->  :) 这里有
+00012766991d[FDD  ] io_write: diskette controller data
+00012779932d[PIT  ] entering timer handler     ---> 设置定时器 因为软盘移动机械譬需要时间 而且相对较多 所以用定时器 而不是延时程序
+00012779932d[PIT81] clock_all:  cycles=4295
+00012779932d[PIT  ] RESETting timer
+00012779932d[PIT  ] deactivated timer
+00012779932d[PIT  ] activated timer
+00012779932d[PIT  ] s.last_usec=3194983
+00012779932d[PIT  ] s.timer_id=1
+00012779932d[PIT  ] s.timer.get_next_event_time=da1a
+00012779932d[PIT  ] s.last_next_event_time=55834
+00012794328d[PIT  ] entering timer handler
+00012794328d[PIT81] clock_all:  cycles=4294
+00012794328d[PIT  ] RESETting timer
+00012794328d[PIT  ] deactivated timer
+00012794328d[PIT  ] activated timer
+00012794328d[PIT  ] s.last_usec=3198582
+00012794328d[PIT  ] s.timer_id=1
+00012794328d[PIT  ] s.timer.get_next_event_time=c954
+00012794328d[PIT  ] s.last_next_event_time=51540
+00012794332d[PIT  ] entering timer handler
+00012794332d[PIT81] clock_all:  cycles=1
+00012794332d[PIT  ] RESETting timer
+00012794332d[PIT  ] deactivated timer
+00012794332d[PIT  ] activated timer
+00012794332d[PIT  ] s.last_usec=3198583
+00012794332d[PIT  ] s.timer_id=1
+00012794332d[PIT  ] s.timer.get_next_event_time=c953
+00012794332d[PIT  ] s.last_next_event_time=51539
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012804000d[XGUI ] XXX: default Xevent type
+00012808728d[PIT  ] entering timer handler
+00012808728d[PIT81] clock_all:  cycles=4294
+00012808728d[PIT  ] RESETting timer
+00012808728d[PIT  ] deactivated timer
+00012808728d[PIT  ] activated timer
+00012808728d[PIT  ] s.last_usec=3202182
+00012808728d[PIT  ] s.timer_id=1
+00012808728d[PIT  ] s.timer.get_next_event_time=b88d
+00012808728d[PIT  ] s.last_next_event_time=47245
+00012808732d[PIT  ] entering timer handler
+00012808732d[PIT81] clock_all:  cycles=1
+00012808732d[PIT  ] RESETting timer
+00012808732d[PIT  ] deactivated timer
+00012808732d[PIT  ] activated timer
+00012808732d[PIT  ] s.last_usec=3202183
+00012808732d[PIT  ] s.timer_id=1
+00012808732d[PIT  ] s.timer.get_next_event_time=b88c
+00012808732d[PIT  ] s.last_next_event_time=47244
+00012823128d[PIT  ] entering timer handler
+00012823128d[PIT81] clock_all:  cycles=4295
+00012823128d[PIT  ] RESETting timer
+00012823128d[PIT  ] deactivated timer
+00012823128d[PIT  ] activated timer
+00012823128d[PIT  ] s.last_usec=3205782
+00012823128d[PIT  ] s.timer_id=1
+00012823128d[PIT  ] s.timer.get_next_event_time=a7c5
+00012823128d[PIT  ] s.last_next_event_time=42949
+00012837524d[PIT  ] entering timer handler
+00012837524d[PIT81] clock_all:  cycles=4294
+00012837524d[PIT  ] RESETting timer
+00012837524d[PIT  ] deactivated timer
+00012837524d[PIT  ] activated timer
+00012837524d[PIT  ] s.last_usec=3209381
+00012837524d[PIT  ] s.timer_id=1
+00012837524d[PIT  ] s.timer.get_next_event_time=96ff
+00012837524d[PIT  ] s.last_next_event_time=38655
+00012837528d[PIT  ] entering timer handler
+00012837528d[PIT81] clock_all:  cycles=1
+00012837528d[PIT  ] RESETting timer
+00012837528d[PIT  ] deactivated timer
+00012837528d[PIT  ] activated timer
+00012837528d[PIT  ] s.last_usec=3209382
+00012837528d[PIT  ] s.timer_id=1
+00012837528d[PIT  ] s.timer.get_next_event_time=96fe
+00012837528d[PIT  ] s.last_next_event_time=38654
+00012851924d[PIT  ] entering timer handler
+00012851924d[PIT81] clock_all:  cycles=4294
+00012851924d[PIT  ] RESETting timer
+00012851924d[PIT  ] deactivated timer
+00012851924d[PIT  ] activated timer
+00012851924d[PIT  ] s.last_usec=3212981
+00012851924d[PIT  ] s.timer_id=1
+00012851924d[PIT  ] s.timer.get_next_event_time=8638
+00012851924d[PIT  ] s.last_next_event_time=34360
+00012851928d[PIT  ] entering timer handler
+00012851928d[PIT81] clock_all:  cycles=2
+00012851928d[PIT  ] RESETting timer
+00012851928d[PIT  ] deactivated timer
+00012851928d[PIT  ] activated timer
+00012851928d[PIT  ] s.last_usec=3212982
+00012851928d[PIT  ] s.timer_id=1
+00012851928d[PIT  ] s.timer.get_next_event_time=8636
+00012851928d[PIT  ] s.last_next_event_time=34358
+00012866320d[PIT  ] entering timer handler
+00012866320d[PIT81] clock_all:  cycles=4293
+00012866320d[PIT  ] RESETting timer
+00012866320d[PIT  ] deactivated timer
+00012866320d[PIT  ] activated timer
+00012866320d[PIT  ] s.last_usec=3216580
+00012866320d[PIT  ] s.timer_id=1
+00012866320d[PIT  ] s.timer.get_next_event_time=7571
+00012866320d[PIT  ] s.last_next_event_time=30065
+00012866324d[PIT  ] entering timer handler
+00012866324d[PIT81] clock_all:  cycles=1
+00012866324d[PIT  ] RESETting timer
+00012866324d[PIT  ] deactivated timer
+00012866324d[PIT  ] activated timer
+00012866324d[PIT  ] s.last_usec=3216581
+00012866324d[PIT  ] s.timer_id=1
+00012866324d[PIT  ] s.timer.get_next_event_time=7570
+00012866324d[PIT  ] s.last_next_event_time=30064
+00012880716d[PIT  ] entering timer handler
+00012880716d[PIT81] clock_all:  cycles=4293
+00012880716d[PIT  ] RESETting timer
+00012880716d[PIT  ] deactivated timer
+00012880716d[PIT  ] activated timer
+00012880716d[PIT  ] s.last_usec=3220179
+00012880716d[PIT  ] s.timer_id=1
+00012880716d[PIT  ] s.timer.get_next_event_time=64ab
+00012880716d[PIT  ] s.last_next_event_time=25771
+00012880720d[PIT  ] entering timer handler
+00012880720d[PIT81] clock_all:  cycles=1
+00012880720d[PIT  ] RESETting timer
+00012880720d[PIT  ] deactivated timer
+00012880720d[PIT  ] activated timer
+00012880720d[PIT  ] s.last_usec=3220180
+00012880720d[PIT  ] s.timer_id=1
+00012880720d[PIT  ] s.timer.get_next_event_time=64aa
+00012880720d[PIT  ] s.last_next_event_time=25770
+00012880724d[PIT  ] entering timer handler
+00012880724d[PIT81] clock_all:  cycles=1
+00012880724d[PIT  ] RESETting timer
+00012880724d[PIT  ] deactivated timer
+00012880724d[PIT  ] activated timer
+00012880724d[PIT  ] s.last_usec=3220181
+00012880724d[PIT  ] s.timer_id=1
+00012880724d[PIT  ] s.timer.get_next_event_time=64a9
+00012880724d[PIT  ] s.last_next_event_time=25769
+00012894991d[IOAP ] set_irq_level(): INTIN6: level=1
+00012894991d[IOAP ] IOAPIC: servicing
+00012894991d[IOAP ] service_ioapic(): INTIN0 is masked
+00012894991d[IOAP ] service_ioapic(): INTIN6 is masked
+00012894991d[PIC  ] IRQ line 6 now high                               -----------> irq line 6 即软盘中断请求线
+00012894991d[PIC  ] signalling IRQ(6)
+00012894991d[CPU0 ] interrupt(): vector = 0e, TYPE = 0, EXT = 1       ----------->  int 15h  ah = 0 al = 1 此功能为开启磁盘驱动马达  start motor
+00012894994d[FDD  ] read(): during command 0x00, port 0x03f4 returns 0x81    --> 读状态信息  驱动器A忙 不能接受CPU的指令 
+00012895000d[FDD  ] write access to port 0x03f5, value=0x08
+00012895000d[FDD  ] command = 0x08
+00012895000d[FDD  ] COMMAND: [08]                          ------>  检测中断状态
+00012895000d[FDD  ] sense interrupt status
+00012895000d[FDD  ] RESULT: [20] [00]          --->  20h表示寻道结束
+00012895000d[FDD  ] io_write: diskette controller data
+00012895002d[FDD  ] read(): during command 0x08, port 0x03f4 returns 0xd1 ---->读状态信息 0xd1表示驱动器a忙 控制器忙 FDC可以发送中断给cpu
+00012895007d[IOAP ] set_irq_level(): INTIN6: level=0
+00012895007d[PIC  ] IRQ line 6 now low
+00012895007d[FDD  ] read(): during command 0x08, port 0x03f5 returns 0x20
+00012895009d[FDD  ] read(): during command 0x08, port 0x03f4 returns 0xd0
+00012895014d[FDD  ] read(): during command 0x08, port 0x03f5 returns 0x00
+00012895016d[FDD  ] read(): during command 0x00, port 0x03f4 returns 0x80
+00012895025d[PIC  ] IO write to 0020 = 20
+00012895116d[PIT  ] entering timer handler
+00012895116d[PIT81] clock_all:  cycles=4293
+00012895116d[PIT  ] RESETting timer
+00012895116d[PIT  ] deactivated timer
+00012895116d[PIT  ] activated timer
+00012895116d[PIT  ] s.last_usec=3223779
+00012895116d[PIT  ] s.timer_id=1
+00012895116d[PIT  ] s.timer.get_next_event_time=53e4
+00012895116d[PIT  ] s.last_next_event_time=21476
+00012895120d[PIT  ] entering timer handler
+00012895120d[PIT81] clock_all:  cycles=2
+00012895120d[PIT  ] RESETting timer
+00012895120d[PIT  ] deactivated timer
+00012895120d[PIT  ] activated timer
+00012895120d[PIT  ] s.last_usec=3223780
+00012895120d[PIT  ] s.timer_id=1
+00012895120d[PIT  ] s.timer.get_next_event_time=53e2
+00012895120d[PIT  ] s.last_next_event_time=21474              -------------> 设置DMA
+00012895152d[CMOS ] CMOS write to address: 0x0070 = 0x10
+00012895153d[CMOS ] CMOS read of CMOS register 0x10
+00012895290d[DMA  ] write: address=000a value=06           ------>  端口0ah  命令 06  bit 0~1 指定DMA通道(0~3)  bit2 :  1 表示屏蔽 0 允许请求
+00012895290d[DMA  ] DMA-1: set_mask_bit=4, channel=2, mask now=01h
+00012895307d[DMA  ] write: address=000c value=00      ---->  端口0ch 命令 00 表示
+00012895307d[DMA  ] DMA-1: clear flip/flop
+00012895323d[DMA  ] write: address=0004 value=00      ----> 4h 00  写基址1
+00012895323d[DMA  ]   DMA-1 base and current address, channel 2
+00012895342d[DMA  ] write: address=0004 value=7c      ---> 4h 00 写基址2
+00012895342d[DMA  ]   DMA-1 base and current address, channel 2
+00012895342d[DMA  ]     base = 7c00
+00012895342d[DMA  ]     curr = 7c00              ===============================> 基址为  0x07c00
+00012895359d[DMA  ] write: address=000c value=00      ---> 0ch  00 
+00012895359d[DMA  ] DMA-1: clear flip/flop
+00012895375d[DMA  ] write: address=0005 value=ff       ---> 05h  写传送多少个字节  low 8 bit   of count
+00012895375d[DMA  ]   DMA-1 base and current count, channel 2
+00012895394d[DMA  ] write: address=0005 value=01       ----> 05h     high 8 bit of count
+00012895394d[DMA  ]   DMA-1 base and current count, channel 2
+00012895394d[DMA  ]     base = 01ff
+00012895394d[DMA  ]     curr = 01ff             ===================================>  count 1ffh 即一个扇区
+00012895414d[DMA  ] write: address=000b value=46        ---> 0bh  46h   DMA读  4ah  DMA写
+00012895414d[DMA  ] DMA-1: mode register[2] = 46
+00012895432d[DMA  ] write: address=0081 value=00       ---> 81h  00h  20位的地址  高四位
+00012895432d[DMA  ] DMA-1: page register 2 = 00
+00012895449d[DMA  ] write: address=000a value=02       ---> 0ah  02h  恢复dma mask 
+00012895449d[DMA  ] DMA-1: set_mask_bit=0, channel=2, mask now=00h
+00012895466d[DMA  ] write: address=000a value=02       ----> 0ah  02              
+00012895466d[DMA  ] DMA-1: set_mask_bit=0, channel=2, mask now=00h
+00012895532d[FDD  ] read(): during command 0x00, port 0x03f2 returns 0x1c      
+00012895563d[FDD  ] write access to port 0x03f2, value=0x1c   ----> 03f2h  1ch  
+00012895563d[FDD  ] io_write: digital output register
+00012895563d[FDD  ]   motor on, drive1 = 0
+00012895563d[FDD  ]   motor on, drive0 = 1
+00012895563d[FDD  ]   dma_and_interrupt_enable=08
+00012895563d[FDD  ]   normal_operation=04
+00012895563d[FDD  ]   drive_select=00
+00012895599d[FDD  ] read(): during command 0x00, port 0x03f4 returns 0x80  -->读状态
+00012895629d[FDD  ] write access to port 0x03f5, value=0xe6
+00012895629d[FDD  ] command = 0xe6
+00012895629d[FDD  ] io_write: diskette controller data
+00012895650d[FDD  ] write access to port 0x03f5, value=0x00
+00012895650d[FDD  ] command = 0x00
+00012895650d[FDD  ] io_write: diskette controller data
+00012895668d[FDD  ] write access to port 0x03f5, value=0x00
+00012895668d[FDD  ] command = 0x00
+00012895668d[FDD  ] io_write: diskette controller data
+00012895686d[FDD  ] write access to port 0x03f5, value=0x00
+00012895686d[FDD  ] command = 0x00
+00012895686d[FDD  ] io_write: diskette controller data
+00012895704d[FDD  ] write access to port 0x03f5, value=0x01
+00012895704d[FDD  ] command = 0x01
+00012895704d[FDD  ] io_write: diskette controller data
+00012895721d[FDD  ] write access to port 0x03f5, value=0x02
+00012895721d[FDD  ] command = 0x02
+00012895721d[FDD  ] io_write: diskette controller data
+00012895742d[FDD  ] write access to port 0x03f5, value=0x01
+00012895742d[FDD  ] command = 0x01
+00012895742d[FDD  ] io_write: diskette controller data
+00012895759d[FDD  ] write access to port 0x03f5, value=0x00
+00012895759d[FDD  ] command = 0x00
+00012895759d[FDD  ] io_write: diskette controller data
+00012895776d[FDD  ] write access to port 0x03f5, value=0xff
+00012895776d[FDD  ] command = 0xff
+00012895776d[FDD  ] COMMAND: [e6] [00] [00] [00] [01] [02] [01] [00] [ff]   ---> 一下写这么多个命令
+00012895776d[FDD  ] read/write normal data
+00012895776d[FDD  ] BEFORE
+00012895776d[FDD  ]   drive    = 0
+00012895776d[FDD  ]   head     = 0
+00012895776d[FDD  ]   cylinder = 0
+00012895776d[FDD  ]   sector   = 1
+00012895776d[FDD  ]   eot      = 1
+00012895776d[FDD  ] floppy_xfer: drive=0, offset=0, bytes=512, direction=from floppy
+00012895776d[FDD  ] io_write: diskette controller data
+00012909512d[PIT  ] entering timer handler
+00012909512d[PIT81] clock_all:  cycles=4293
+00012909512d[PIT  ] RESETting timer
+00012909512d[PIT  ] deactivated timer
+00012909512d[PIT  ] activated timer
+00012909512d[PIT  ] s.last_usec=3227378
+00012909512d[PIT  ] s.timer_id=1
+00012909512d[PIT  ] s.timer.get_next_event_time=431d
+00012909512d[PIT  ] s.last_next_event_time=17181
+00012909516d[PIT  ] entering timer handler
+00012909516d[PIT81] clock_all:  cycles=1
+00012909516d[PIT  ] RESETting timer
+00012909516d[PIT  ] deactivated timer
+00012909516d[PIT  ] activated timer
+00012909516d[PIT  ] s.last_usec=3227379
+00012909516d[PIT  ] s.timer_id=1
+00012909516d[PIT  ] s.timer.get_next_event_time=431c
+00012909516d[PIT  ] s.last_next_event_time=17180
+00012909520d[PIT  ] entering timer handler
+00012909520d[PIT81] clock_all:  cycles=1
+00012909520d[PIT  ] RESETting timer
+00012909520d[PIT  ] deactivated timer
+00012909520d[PIT  ] activated timer
+00012909520d[PIT  ] s.last_usec=3227380
+00012909520d[PIT  ] s.timer_id=1
+00012909520d[PIT  ] s.timer.get_next_event_time=431b
+00012909520d[PIT  ] s.last_next_event_time=17179
+00012923912d[PIT  ] entering timer handler
+00012923912d[PIT81] clock_all:  cycles=4293
+00012923912d[PIT  ] RESETting timer
+00012923912d[PIT  ] deactivated timer
+00012923912d[PIT  ] activated timer
+00012923912d[PIT  ] s.last_usec=3230978
+00012923912d[PIT  ] s.timer_id=1
+00012923912d[PIT  ] s.timer.get_next_event_time=3256
+00012923912d[PIT  ] s.last_next_event_time=12886
+00012923916d[PIT  ] entering timer handler
+00012923916d[PIT81] clock_all:  cycles=1
+00012923916d[PIT  ] RESETting timer
+00012923916d[PIT  ] deactivated timer
+00012923916d[PIT  ] activated timer
+00012923916d[PIT  ] s.last_usec=3230979
+00012923916d[PIT  ] s.timer_id=1
+00012923916d[PIT  ] s.timer.get_next_event_time=3255
+00012923916d[PIT  ] s.last_next_event_time=12885
+00012923920d[PIT  ] entering timer handler
+00012923920d[PIT81] clock_all:  cycles=1
+00012923920d[PIT  ] RESETting timer
+00012923920d[PIT  ] deactivated timer
+00012923920d[PIT  ] activated timer
+00012923920d[PIT  ] s.last_usec=3230980
+00012923920d[PIT  ] s.timer_id=1
+00012923920d[PIT  ] s.timer.get_next_event_time=3254
+00012923920d[PIT  ] s.last_next_event_time=12884
+00012938312d[PIT  ] entering timer handler
+00012938312d[PIT81] clock_all:  cycles=4294
+00012938312d[PIT  ] RESETting timer
+00012938312d[PIT  ] deactivated timer
+00012938312d[PIT  ] activated timer
+00012938312d[PIT  ] s.last_usec=3234578
+00012938312d[PIT  ] s.timer_id=1
+00012938312d[PIT  ] s.timer.get_next_event_time=218e
+00012938312d[PIT  ] s.last_next_event_time=8590
+00012938316d[PIT  ] entering timer handler
+00012938316d[PIT81] clock_all:  cycles=1
+00012938316d[PIT  ] RESETting timer
+00012938316d[PIT  ] deactivated timer
+00012938316d[PIT  ] activated timer
+00012938316d[PIT  ] s.last_usec=3234579
+00012938316d[PIT  ] s.timer_id=1
+00012938316d[PIT  ] s.timer.get_next_event_time=218d
+00012938316d[PIT  ] s.last_next_event_time=8589
+00012940731d[FDD  ] <<READ DONE>>                                                     ----->  读盘成功!!!!!!!!!!!!!!!!!!!
+00012940731d[FDD  ] AFTER
+00012940731d[FDD  ]   drive    = 0
+00012940731d[FDD  ]   head     = 1
+00012940731d[FDD  ]   cylinder = 0
+00012940731d[FDD  ]   sector   = 1
+00012940731d[IOAP ] set_irq_level(): INTIN6: level=1
+00012940731d[IOAP ] IOAPIC: servicing                                         -------->   pic  即 program  interrupt chip 可编程芯片 :)
+00012940731d[IOAP ] service_ioapic(): INTIN0 is masked
+00012940731d[IOAP ] service_ioapic(): INTIN6 is masked
+00012940731d[PIC  ] IRQ line 6 now high
+00012940731d[PIC  ] signalling IRQ(6)                                        
+00012940731d[FDD  ] RESULT: [04] [00] [00] [00] [01] [01] [02] 
+00012940732d[CPU0 ] interrupt(): vector = 0e, TYPE = 0, EXT = 1               ----------> int 15h ah = 0   al  = 1 
+00012940735d[FDD  ] read(): during command 0xe6, port 0x03f4 returns 0xd0
+00012940744d[PIC  ] IO write to 0020 = 20
+00012940860d[FDD  ] read(): during command 0xe6, port 0x03f4 returns 0xd0
+00012940878d[IOAP ] set_irq_level(): INTIN6: level=0
+00012940878d[PIC  ] IRQ line 6 now low                                        ----------->   irq   line 6  电信号消失
+00012940878d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x04
+00012940892d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x00
+00012940906d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x00
+00012940920d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x00
+00012940934d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x01
+00012940948d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x01
+00012940962d[FDD  ] read(): during command 0xe6, port 0x03f5 returns 0x02
+00012941214d[CMOS ] CMOS write to address: 0x0070 = 0x38
+00012941215d[CMOS ] CMOS read of CMOS register 0x38
+00012943037i[BIOS ] Booting from 0000:7c00
+(0) Breakpoint 1, 0x00007c00 in ?? ()
+Next at t=12943098
+(0) [0x0000
+软盘编程即
+1.  设置开启软盘电机，启动软盘控制器
+2.  寻道 设置定时器 寻道需要时间
+3.  判断寻道时候结束
+4.  设置DMA控制器
+5.  向软盘控制器 写控制字

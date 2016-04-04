@@ -1,0 +1,164 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BOOTOFF	bootblock.asm	/^		BOOTOFF	  equ	 0x200	$/;"	d
+BOOTSEG	bootblock.asm	/^		BOOTSEG   equ    0x1000$/;"	d
+BUFFER	bootblock.asm	/^                BUFFER    equ    0x0600$/;"	d
+ClockHandler	floppy.asm	/^ClockHandler	equ	$	+	010000h$/;"	d
+DEVICE	bootblock.asm	/^		DEVICE    equ    0$/;"	d
+DispStr	loader.asm	/^DispStr:$/;"	l
+Disp_int	floppy.asm	/^Disp_int:      $/;"	l
+Elf_PH_Offset	loader.asm	/^Elf_PH_Offset			equ	0x34$/;"	d
+FILENAME_OFFSET	loader.asm	/^FILENAME_OFFSET		equ	4$/;"	d
+FloppyHandle	floppy.asm	/^FloppyHandle	equ	$	+	010000h$/;"	d
+Floppy_sence	floppy.asm	/^Floppy_sence:$/;"	l
+GdtLen	floppy.asm	/^GdtLen				equ	$	-	LABEL_DESC_GDT$/;"	d
+GdtLen	loader.asm	/^GdtLen				equ	$	-	LABEL_DESC_GDT$/;"	d
+GdtPtr	floppy.asm	/^GdtPtr:$/;"	l
+GdtPtr	loader.asm	/^GdtPtr:$/;"	l
+GetData	floppy.asm	/^GetData:$/;"	l
+Get_result	floppy.asm	/^Get_result:$/;"	l
+HIGH_INODE	loader.asm	/^HIGH_INODE      equ     ( INODE_SEG * 0x10 >> 16) & 0xf $/;"	d
+HIGH_INZONE	loader.asm	/^HIGH_INZONE	equ	( INZONE_SEG * 0x10 >> 16 ) & 0xf $/;"	d
+HIGH_KERNEL	loader.asm	/^HIGH_KERNEL	equ	( KERNEL_SEG * 0x10 >> 16 ) & 0xf $/;"	d
+HIGH_ROOT	loader.asm	/^HIGH_ROOT	equ	(ROOTDIR_SEG*0x10 >> 16) & 0xf$/;"	d
+HIGH_ZONE	loader.asm	/^HIGH_ZONE	equ	( ZONE_SEG * 0x10 >> 16 ) & 0xf $/;"	d
+INODE_SEG	loader.asm	/^INODE_SEG       equ     KERNEL_SEG - 0x300  ;inode数组缓冲$/;"	d
+INZONE_SEG	loader.asm	/^INZONE_SEG      equ     KERNEL_SEG - 0x100  ;存放二级间接寻址的块号缓冲$/;"	d
+IdtLen	floppy.asm	/^IdtLen		equ	$	-	LABEL_IDT$/;"	d
+IdtLen	loader.asm	/^IdtLen		equ	$	-	LABEL_IDT$/;"	d
+IdtPtr	floppy.asm	/^IdtPtr:$/;"	l
+IdtPtr	loader.asm	/^IdtPtr:$/;"	l
+Initial8253	floppy.asm	/^Initial8253:$/;"	l
+Initial8259A	floppy.asm	/^Initial8259A:$/;"	l
+KernelEntry	loader.asm	/^KernelEntry			equ	0x30400$/;"	d
+KernelFileName	loader.asm	/^KernelFileName:		db	 "image",0		;查找的文件文件名$/;"	d
+KillMontor	floppy.asm	/^KillMontor:$/;"	l
+KillMontor	loader.asm	/^KillMontor:$/;"	l
+LABEL_DESC_FLAT_CODE32	floppy.asm	/^LABEL_DESC_FLAT_CODE32:	Descriptor	0,	0FFFFh,	DA_C|DA_32|DA_LIMIT_4G	$/;"	l
+LABEL_DESC_FLAT_CODE32	loader.asm	/^LABEL_DESC_FLAT_CODE32:	Descriptor	0,	0FFFFh,	DA_C|DA_32|DA_LIMIT_4G		$/;"	l
+LABEL_DESC_FLAT_DATA32	floppy.asm	/^LABEL_DESC_FLAT_DATA32:	Descriptor	0,	0FFFFh,	DA_DRW|DA_32|DA_LIMIT_4G   ; DA_SS32表示默认使用32位操作数$/;"	l
+LABEL_DESC_FLAT_DATA32	loader.asm	/^LABEL_DESC_FLAT_DATA32:	Descriptor	0,	0FFFFh,	DA_DRW|DA_32|DA_LIMIT_4G		$/;"	l
+LABEL_DESC_GDT	floppy.asm	/^LABEL_DESC_GDT:		Descriptor	0,	0,	0$/;"	l
+LABEL_DESC_GDT	loader.asm	/^LABEL_DESC_GDT:		Descriptor	0,	0,	0						$/;"	l
+LABEL_DESC_TSS	loader.asm	/^LABEL_DESC_TSS:		Descriptor	0,	TssLen-1,	DA_386TSS|DA_DPL3			$/;"	l
+LABEL_DESC_VIDEO	floppy.asm	/^LABEL_DESC_VIDEO:	Descriptor	0B8000h,0FFFFh,	DA_DRW|DA_DPL3		$/;"	l
+LABEL_DESC_VIDEO	loader.asm	/^LABEL_DESC_VIDEO:	Descriptor	0B8000h,0FFFFh,		DA_DRW|DA_DPL3				$/;"	l
+LABEL_IDT	floppy.asm	/^LABEL_IDT:$/;"	l
+LABEL_IDT	loader.asm	/^LABEL_IDT:$/;"	l
+LABEL_PM_START	floppy.asm	/^LABEL_PM_START:$/;"	l
+LABEL_PM_START	loader.asm	/^LABEL_PM_START:$/;"	l
+LABEL_START	floppy.asm	/^LABEL_START:	$/;"	l
+LABEL_START	loader.asm	/^LABEL_START:$/;"	l
+LABEL_TSS	loader.asm	/^LABEL_TSS:$/;"	l
+LOADOFF	bootblock.asm	/^                LOADOFF   equ    0x7c00$/;"	d
+LOGSEC	bootblock.asm	/^		LOGSEC    equ    8$/;"	d
+LOWSEC	bootblock.asm	/^		LOWSEC	  equ    2   $/;"	d
+LOW_INODE	loader.asm	/^LOW_INODE	equ	INODE_SEG * 0x10 & 0xffff$/;"	d
+LOW_INZONE	loader.asm	/^LOW_INZONE	equ	INZONE_SEG * 0x10 & 0xffff $/;"	d
+LOW_KERNEL	loader.asm	/^LOW_KERNEL	equ	KERNEL_SEG * 0x10 & 0xffff $/;"	d
+LOW_ROOT	loader.asm	/^LOW_ROOT	equ	ROOTDIR_SEG*0x10 & 0xffff$/;"	d
+LOW_ZONE	loader.asm	/^LOW_ZONE	equ	ZONE_SEG * 0x10 & 0xffff$/;"	d
+MemCopy	floppy.asm	/^MemCopy:$/;"	l
+MemCopy	loader.asm	/^MemCopy:$/;"	l
+Memset	floppy.asm	/^Memset:$/;"	l
+Memset	loader.asm	/^Memset:$/;"	l
+Message	loader.asm	/^Message:	$/;"	l
+NormalHandler0	loader.asm	/^NormalHandler0	equ	_NormalHandler0 + LINERADDLOADER$/;"	d
+Print_result	floppy.asm	/^Print_result:$/;"	l
+ROOTDIR_SEG	loader.asm	/^ROOTDIR_SEG	equ	KERNEL_SEG - 0x400  ;存放根目录的缓冲$/;"	d
+ReadBlock	loader.asm	/^ReadBlock:$/;"	l
+SECPCYL	bootblock.asm	/^                SECPCYL   equ    6$/;"	d
+Scr_loc	loader.asm	/^Scr_loc		equ	_Scr_loc  +  LINERADDLOADER$/;"	d
+SelectorFlatCode32	floppy.asm	/^SelectorFlatCode32		equ	LABEL_DESC_FLAT_CODE32 - LABEL_DESC_GDT	;08h$/;"	d
+SelectorFlatCode32	loader.asm	/^SelectorFlatCode32		equ	LABEL_DESC_FLAT_CODE32 - LABEL_DESC_GDT			;08h$/;"	d
+SelectorFlatData32	floppy.asm	/^SelectorFlatData32		equ	LABEL_DESC_FLAT_DATA32 - LABEL_DESC_GDT	;10h$/;"	d
+SelectorFlatData32	loader.asm	/^SelectorFlatData32		equ	LABEL_DESC_FLAT_DATA32 - LABEL_DESC_GDT			;10h$/;"	d
+SelectorTss	loader.asm	/^SelectorTss			equ	LABEL_DESC_TSS	-	LABEL_DESC_GDT			;20h$/;"	d
+SelectorVideo	floppy.asm	/^SelectorVideo			equ	LABEL_DESC_VIDEO  - LABEL_DESC_GDT+SA_RPL3	;18h+03h$/;"	d
+SelectorVideo	loader.asm	/^SelectorVideo			equ	LABEL_DESC_VIDEO	  - LABEL_DESC_GDT+SA_RPL3	;18h+03h$/;"	d
+Stack	floppy.asm	/^Stack:$/;"	l
+Stack	loader.asm	/^Stack:$/;"	l
+TopOfStack	floppy.asm	/^TopOfStack	equ	 10000h+\$$/;"	d
+TopOfStack	loader.asm	/^TopOfStack	equ  LINERADDLOADER + $   ;32位保护模式使用的栈$/;"	d
+TssLen	loader.asm	/^TssLen	equ	$	-	LABEL_TSS$/;"	d
+ZONE_NR	loader.asm	/^ZONE_NR		equ	10$/;"	d
+ZONE_SEG	loader.asm	/^ZONE_SEG        equ	KERNEL_SEG - 0x200  ;存放一级间接寻址的块号缓冲$/;"	d
+_ClockHandler	floppy.asm	/^_ClockHandler:$/;"	l
+_FloppyHandle	floppy.asm	/^_FloppyHandle:								;  软盘中断函数$/;"	l
+_Floppy_sence	floppy.asm	/^_Floppy_sence	equ	10000h  + \$$/;"	d
+_Get_result	floppy.asm	/^_Get_result	equ	$   + 10000h$/;"	d
+_NormalHandler0	loader.asm	/^_NormalHandler0:	$/;"	l
+_Scr_loc	loader.asm	/^_Scr_loc:	dd	0$/;"	d
+_do_floppy	floppy.asm	/^_do_floppy:	dd	0$/;"	d
+_pos	floppy.asm	/^_pos:	dw	960	                  ;  global  var  all use $/;"	d
+_pos1	floppy.asm	/^_pos1:	dw	160 $/;"	d
+_pos2	floppy.asm	/^_pos2:	dw	320  	                  ;  result  array  print pos  2 $/;"	d
+_pos3	floppy.asm	/^_pos3:	dw	320                    ;   else use $/;"	d
+_reply_buffer	floppy.asm	/^_reply_buffer:$/;"	l
+_reply_num	floppy.asm	/^_reply_num:   db 0$/;"	d
+_time	floppy.asm	/^_time:	dd	0$/;"	d
+address	bootblock.asm	/^address:	 db     0x10,0x88,0x0,0x0	    $/;"	d
+boot	bootblock.asm	/^boot:$/;"	l
+bootdev	loader.asm	/^bootdev		db	 0  ;驱动器号  $/;"	d
+directptr	loader.asm	/^directptr       dw     0$/;"	d
+do_floppy	floppy.asm	/^do_floppy	equ	$	+	10000h   ;每次软盘中断后执行的函数 因为每次中断原因不一样 所以要调用相应的函数$/;"	d
+done	bootblock.asm	/^done:$/;"	l
+dw	bootblock.asm	/^dw	        0xaa55$/;"	l
+error	bootblock.asm	/^error:$/;"	l
+floppy	bootblock.asm	/^floppy:         xor	ah,	ah$/;"	l
+inc	bootblock.asm	/^		inc	di$/;"	d
+inc	loader.asm	/^	inc	di$/;"	d
+index	loader.asm	/^index           dd     0$/;"	d
+indzoneptr	loader.asm	/^indzoneptr	dw     0$/;"	d
+inodenum	loader.asm	/^inodenum	dd     0$/;"	d
+io_delay	floppy.asm	/^io_delay:$/;"	l
+io_delay	loader.asm	/^io_delay:$/;"	l
+io_delay1	floppy.asm	/^io_delay1:$/;"	l
+kerneloff	loader.asm	/^kerneloff	dw     0x400   ;  加载内核时计算偏移$/;"	d
+len	floppy.asm	/^len       equ  $ - message1$/;"	d
+load	bootblock.asm	/^load:$/;"	l
+load4G	loader.asm	/^load4G:$/;"	l
+load8M	loader.asm	/^load8M:	$/;"	l
+loadboot	bootblock.asm	/^loadboot:$/;"	l
+lookup	loader.asm	/^lookup:$/;"	l
+main	full.c	/^int main()$/;"	f
+message0	bootblock.asm	/^message0:        db    "loading ..."$/;"	d
+message1	bootblock.asm	/^message1:        db    "load fail  "$/;"	d
+message1	floppy.asm	/^message1    db  "load kernel ..."$/;"	d
+message2	bootblock.asm	/^message2:        db    "success load",0$/;"	d
+mul	bootblock.asm	/^		mul	dh$/;"	d
+mul	loader.asm	/^	mul	dh$/;"	d
+next	bootblock.asm	/^next:$/;"	l
+number	loader.asm	/^number          dd     0$/;"	d
+org	floppy.asm	/^org	 200h	$/;"	l
+org	loader.asm	/^org	0200h$/;"	l
+out_put	floppy.asm	/^out_put:$/;"	l
+pages	loader.asm	/^pages           dd     0$/;"	d
+pop	floppy.asm	/^	pop	dx$/;"	d
+pop	loader.asm	/^	pop	dx$/;"	d
+pos	floppy.asm	/^pos     equ     $  + 10000h$/;"	d
+pos1	floppy.asm	/^pos1	equ	$	+	10000h    ;  Disp_int use pos   status       1 $/;"	d
+pos2	floppy.asm	/^pos2	equ	$	+	10000h$/;"	d
+pos3	floppy.asm	/^pos3	equ	$	+	10000h$/;"	d
+push	bootblock.asm	/^		push    dx$/;"	d
+push	floppy.asm	/^	push	dx$/;"	d
+push	loader.asm	/^	push	dx                         ;  保存寄存器$/;"	d
+push	loader.asm	/^	push	dx$/;"	d
+rdeval	bootblock.asm	/^rdeval:$/;"	l
+read	bootblock.asm	/^read:$/;"	l
+reply_buffer	floppy.asm	/^reply_buffer   equ  $ + 10000h	$/;"	d
+reply_num	floppy.asm	/^reply_num	equ	$ + 10000h$/;"	d
+sectors	bootblock.asm	/^sectors:         db     18,  15, 9$/;"	d
+sectors_per_cyl	loader.asm	/^sectors_per_cyl		dw       18*2$/;"	d
+sectors_per_track	loader.asm	/^sectors_per_track	db       18 ; 在bootsec得到$/;"	d
+smallload	loader.asm	/^smallload:$/;"	l
+success	bootblock.asm	/^success:$/;"	l
+success	loader.asm	/^success:$/;"	l
+time	floppy.asm	/^time	equ	$  + 10000h$/;"	d
+times	bootblock.asm	/^times   510-($-$$)  db  0$/;"	l
+zonenum	loader.asm	/^zonenum         dd     0      ;控制外层循环$/;"	d
+zoneptr	loader.asm	/^zoneptr	        dw     0$/;"	d
