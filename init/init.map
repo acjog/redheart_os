@@ -1,0 +1,1227 @@
+
+init:     file format elf32-i386
+
+SYMBOL TABLE:
+00606000 l    d  .text	00000000 .text
+00607000 l    d  .data	00000000 .data
+006069a4 l    d  .rodata	00000000 .rodata
+00606a1c l    d  .eh_frame	00000000 .eh_frame
+00607020 l    d  .bss	00000000 .bss
+00000000 l    d  .stab	00000000 .stab
+00000000 l    d  .stabstr	00000000 .stabstr
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_pubnames	00000000 .debug_pubnames
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_pubtypes	00000000 .debug_pubtypes
+00000000 l    df *ABS*	00000000 crt0.asm
+00000000 l    df *ABS*	00000000 exit.c
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 put.c
+00000000 l    df *ABS*	00000000 sendrec.asm
+00000002 l       *ABS*	00000000 A_RECEVE
+00000001 l       *ABS*	00000000 A_SEND
+00000003 l       *ABS*	00000000 A_SENDREC
+00000000 l    df *ABS*	00000000 printf.c
+00607024 l     O .bss	00000012 tmp
+00000000 l    df *ABS*	00000000 string.c
+00000000 l    df *ABS*	00000000 fork.c
+00000000 l    df *ABS*	00000000 read.c
+00000000 l    df *ABS*	00000000 exec.c
+00000000 l    df *ABS*	00000000 open.c
+00000000 l    df *ABS*	00000000 mknode.c
+00606628 g     F .text	0000001d strcpy
+0060650e g     F .text	00000119 printf
+006063fb g     F .text	00000065 _flush
+00606750 g     F .text	00000020 memcpy
+00607000 g     O .data	00000020 build_cmd
+00606474 g     F .text	0000009a itoa
+00607040 g     O .bss	00000028 shell_argv
+0060666a g     F .text	0000002c strcat
+0060626c g     F .text	000000a3 parseline
+006067f8 g     F .text	00000089 exec
+00607020 g     O .bss	00000004 buf_count
+00607068 g     O .bss	00000001 test
+00606000 g       .text	00000000 _start
+006067c0 g     F .text	00000037 read
+006066f4 g     F .text	0000002f strncmp
+00606645 g     F .text	00000025 strncpy
+00606958 g     F .text	0000004b mknode
+00606798 g     F .text	00000025 fork
+00606696 g     F .text	00000035 strncat
+00607020 g       *ABS*	00000000 __bss_start
+0060630f g     F .text	00000061 build_command
+00606770 g     F .text	00000025 memset
+00606028 g     F .text	00000102 main
+006063bc g     F .text	0000003f putc
+006066cb g     F .text	00000029 strcmp
+00606396 g     F .text	00000026 is_lower
+00607280 g     O .bss	00000100 buf
+006071c0 g     O .bss	00000024 put_msg
+00607200 g     O .bss	00000064 print_buf
+00607020 g       *ABS*	00000000 _edata
+00607380 g       *ABS*	00000000 _end
+00606370 g     F .text	00000026 is_uper
+0060612a g     F .text	00000142 eval
+00606010 g     F .text	00000015 exit
+00606460 g       .text	00000000 sendrec
+00607080 g     O .bss	00000024 m
+00606723 g     F .text	0000002d strlen
+00606914 g     F .text	00000042 open
+006070c0 g     O .bss	00000100 cmdline
+00606881 g     F .text	00000093 mm_exec
+
+
+
+Disassembly of section .text:
+
+00606000 <_start>:
+  606000:	e8 23 00 00 00       	call   606028 <main>
+  606005:	50                   	push   eax
+  606006:	e8 05 00 00 00       	call   606010 <exit>
+  60600b:	eb fe                	jmp    60600b <_start+0xb>
+  60600d:	90                   	nop
+  60600e:	90                   	nop
+  60600f:	90                   	nop
+
+00606010 <exit>:
+  606010:	55                   	push   ebp
+  606011:	89 e5                	mov    ebp,esp
+  606013:	83 ec 30             	sub    esp,0x30
+  606016:	c7 45 e0 01 00 00 00 	mov    DWORD PTR [ebp-0x20],0x1
+  60601d:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606020:	89 45 e4             	mov    DWORD PTR [ebp-0x1c],eax
+  606023:	eb fe                	jmp    606023 <exit+0x13>
+  606025:	90                   	nop
+  606026:	90                   	nop
+  606027:	90                   	nop
+
+00606028 <main>:
+void  eval(u8_t *) ;
+void  parseline( u8_t *cmdline , u8_t **argv );
+i32_t build_command( u8_t *cmd[] );
+i32_t  mm_exec(i32_t task  , u8_t *argv[]  );
+int main()
+{
+  606028:	55                   	push   ebp
+  606029:	89 e5                	mov    ebp,esp
+  60602b:	83 e4 f0             	and    esp,0xfffffff0
+  60602e:	83 ec 10             	sub    esp,0x10
+    i32_t  pid  , a  , b  ;
+    i32_t  fd ;
+    //开始使用页保护，将数据段替换出来
+    test  = 1;
+  606031:	c6 05 68 70 60 00 01 	mov    BYTE PTR ds:0x607068,0x1
+    printf(" this is init , haha hello buf:%d ",cmdline);
+  606038:	c7 44 24 04 c0 70 60 	mov    DWORD PTR [esp+0x4],0x6070c0
+  60603f:	00 
+  606040:	c7 04 24 b8 69 60 00 	mov    DWORD PTR [esp],0x6069b8
+  606047:	e8 c2 04 00 00       	call   60650e <printf>
+    mknode("/dev/stdin" , I_CHAR_SPECIAL , 0x1 ,0x300);
+  60604c:	c7 44 24 0c 00 03 00 	mov    DWORD PTR [esp+0xc],0x300
+  606053:	00 
+  606054:	c7 44 24 08 01 00 00 	mov    DWORD PTR [esp+0x8],0x1
+  60605b:	00 
+  60605c:	c7 44 24 04 6d 41 00 	mov    DWORD PTR [esp+0x4],0x416d
+  606063:	00 
+  606064:	c7 04 24 db 69 60 00 	mov    DWORD PTR [esp],0x6069db
+  60606b:	e8 e8 08 00 00       	call   606958 <mknode>
+    mknode("/dev/stdout", I_CHAR_SPECIAL , 0x1 ,0x300);
+  606070:	c7 44 24 0c 00 03 00 	mov    DWORD PTR [esp+0xc],0x300
+  606077:	00 
+  606078:	c7 44 24 08 01 00 00 	mov    DWORD PTR [esp+0x8],0x1
+  60607f:	00 
+  606080:	c7 44 24 04 6d 41 00 	mov    DWORD PTR [esp+0x4],0x416d
+  606087:	00 
+  606088:	c7 04 24 e6 69 60 00 	mov    DWORD PTR [esp],0x6069e6
+  60608f:	e8 c4 08 00 00       	call   606958 <mknode>
+    mknode("/dev/stderr", I_CHAR_SPECIAL , 0x1 ,0x300);
+  606094:	c7 44 24 0c 00 03 00 	mov    DWORD PTR [esp+0xc],0x300
+  60609b:	00 
+  60609c:	c7 44 24 08 01 00 00 	mov    DWORD PTR [esp+0x8],0x1
+  6060a3:	00 
+  6060a4:	c7 44 24 04 6d 41 00 	mov    DWORD PTR [esp+0x4],0x416d
+  6060ab:	00 
+  6060ac:	c7 04 24 f2 69 60 00 	mov    DWORD PTR [esp],0x6069f2
+  6060b3:	e8 a0 08 00 00       	call   606958 <mknode>
+    open("/dev/stdin" ,0x1);
+  6060b8:	c7 44 24 04 01 00 00 	mov    DWORD PTR [esp+0x4],0x1
+  6060bf:	00 
+  6060c0:	c7 04 24 db 69 60 00 	mov    DWORD PTR [esp],0x6069db
+  6060c7:	e8 48 08 00 00       	call   606914 <open>
+    open("/dev/stdout",0x1);
+  6060cc:	c7 44 24 04 01 00 00 	mov    DWORD PTR [esp+0x4],0x1
+  6060d3:	00 
+  6060d4:	c7 04 24 e6 69 60 00 	mov    DWORD PTR [esp],0x6069e6
+  6060db:	e8 34 08 00 00       	call   606914 <open>
+    open("/dev/stderr",0x1);
+  6060e0:	c7 44 24 04 01 00 00 	mov    DWORD PTR [esp+0x4],0x1
+  6060e7:	00 
+  6060e8:	c7 04 24 f2 69 60 00 	mov    DWORD PTR [esp],0x6069f2
+  6060ef:	e8 20 08 00 00       	call   606914 <open>
+    printf("hello world ");
+    #endif
+    //执行shell 
+    while ( TRUE )
+    {
+       printf("localhost@thinks>");
+  6060f4:	c7 04 24 fe 69 60 00 	mov    DWORD PTR [esp],0x6069fe
+  6060fb:	e8 0e 04 00 00       	call   60650e <printf>
+       read(STDIN,cmdline, 256);
+  606100:	c7 44 24 08 00 01 00 	mov    DWORD PTR [esp+0x8],0x100
+  606107:	00 
+  606108:	c7 44 24 04 c0 70 60 	mov    DWORD PTR [esp+0x4],0x6070c0
+  60610f:	00 
+  606110:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  606117:	e8 a4 06 00 00       	call   6067c0 <read>
+       #ifdef _INIT_DEBUG
+       printf( cmdline );
+       #endif
+       eval( cmdline );
+  60611c:	c7 04 24 c0 70 60 00 	mov    DWORD PTR [esp],0x6070c0
+  606123:	e8 02 00 00 00       	call   60612a <eval>
+    }
+  606128:	eb ca                	jmp    6060f4 <main+0xcc>
+
+0060612a <eval>:
+    return 0;
+}
+
+void eval(u8_t *cmdline )
+{
+  60612a:	55                   	push   ebp
+  60612b:	89 e5                	mov    ebp,esp
+  60612d:	83 ec 38             	sub    esp,0x38
+  i32_t pid  , r ;
+  i32_t index , i,len ;
+  // 检测是否为有效按键
+  len = strlen( cmdline ) ; 
+  606130:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606133:	89 04 24             	mov    DWORD PTR [esp],eax
+  606136:	e8 e8 05 00 00       	call   606723 <strlen>
+  60613b:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+  if( cmdline[len-1] == '\n')
+  60613e:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  606141:	83 e8 01             	sub    eax,0x1
+  606144:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  606147:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  60614a:	3c 0a                	cmp    al,0xa
+  60614c:	75 0c                	jne    60615a <eval+0x30>
+  {
+         cmdline[len-1] = 0 ;
+  60614e:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  606151:	83 e8 01             	sub    eax,0x1
+  606154:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  606157:	c6 00 00             	mov    BYTE PTR [eax],0x0
+  }
+  for (i=0 ; cmdline[i] != 0 ;)
+  60615a:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+  606161:	eb 6c                	jmp    6061cf <eval+0xa5>
+  {
+      if(!(is_uper(cmdline[i])||is_lower(cmdline[i])||cmdline[i]==' '||cmdline[i] == '-'||cmdline[i]=='/'||cmdline[i]=='.'))
+  606163:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606166:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  606169:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  60616c:	0f b6 c0             	movzx  eax,al
+  60616f:	89 04 24             	mov    DWORD PTR [esp],eax
+  606172:	e8 f9 01 00 00       	call   606370 <is_uper>
+  606177:	85 c0                	test   eax,eax
+  606179:	75 50                	jne    6061cb <eval+0xa1>
+  60617b:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  60617e:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  606181:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  606184:	0f b6 c0             	movzx  eax,al
+  606187:	89 04 24             	mov    DWORD PTR [esp],eax
+  60618a:	e8 07 02 00 00       	call   606396 <is_lower>
+  60618f:	85 c0                	test   eax,eax
+  606191:	75 38                	jne    6061cb <eval+0xa1>
+  606193:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606196:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  606199:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  60619c:	3c 20                	cmp    al,0x20
+  60619e:	74 2b                	je     6061cb <eval+0xa1>
+  6061a0:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6061a3:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  6061a6:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6061a9:	3c 2d                	cmp    al,0x2d
+  6061ab:	74 1e                	je     6061cb <eval+0xa1>
+  6061ad:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6061b0:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  6061b3:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6061b6:	3c 2f                	cmp    al,0x2f
+  6061b8:	74 11                	je     6061cb <eval+0xa1>
+  6061ba:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6061bd:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  6061c0:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6061c3:	3c 2e                	cmp    al,0x2e
+  6061c5:	0f 85 98 00 00 00    	jne    606263 <eval+0x139>
+      {
+          return ;
+      }
+      i++ ;
+  6061cb:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  len = strlen( cmdline ) ; 
+  if( cmdline[len-1] == '\n')
+  {
+         cmdline[len-1] = 0 ;
+  }
+  for (i=0 ; cmdline[i] != 0 ;)
+  6061cf:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6061d2:	03 45 08             	add    eax,DWORD PTR [ebp+0x8]
+  6061d5:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6061d8:	84 c0                	test   al,al
+  6061da:	75 87                	jne    606163 <eval+0x39>
+      {
+          return ;
+      }
+      i++ ;
+  }
+  parseline( cmdline , shell_argv );
+  6061dc:	c7 44 24 04 40 70 60 	mov    DWORD PTR [esp+0x4],0x607040
+  6061e3:	00 
+  6061e4:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  6061e7:	89 04 24             	mov    DWORD PTR [esp],eax
+  6061ea:	e8 7d 00 00 00       	call   60626c <parseline>
+  if ( shell_argv[0] == '\0' )
+  6061ef:	a1 40 70 60 00       	mov    eax,ds:0x607040
+  6061f4:	85 c0                	test   eax,eax
+  6061f6:	74 6e                	je     606266 <eval+0x13c>
+  {
+      return ;
+  }
+  index = build_command(shell_argv ) ;
+  6061f8:	c7 04 24 40 70 60 00 	mov    DWORD PTR [esp],0x607040
+  6061ff:	e8 0b 01 00 00       	call   60630f <build_command>
+  606204:	89 45 ec             	mov    DWORD PTR [ebp-0x14],eax
+  //内部命令shell自己处理
+  if ( index >= 0  )
+  606207:	83 7d ec 00          	cmp    DWORD PTR [ebp-0x14],0x0
+  60620b:	78 1c                	js     606229 <eval+0xff>
+  {
+//     printf(" buildin cmd :%d,%s",build_cmd[index].server,shell_argv[0]);
+     mm_exec( build_cmd[index].server , shell_argv );
+  60620d:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+  606210:	8b 04 c5 04 70 60 00 	mov    eax,DWORD PTR [eax*8+0x607004]
+  606217:	c7 44 24 04 40 70 60 	mov    DWORD PTR [esp+0x4],0x607040
+  60621e:	00 
+  60621f:	89 04 24             	mov    DWORD PTR [esp],eax
+  606222:	e8 5a 06 00 00       	call   606881 <mm_exec>
+     return ;
+  606227:	eb 41                	jmp    60626a <eval+0x140>
+  }
+  //外部命令
+  if ( ( pid=fork()) == 0 )
+  606229:	e8 6a 05 00 00       	call   606798 <fork>
+  60622e:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+  606231:	83 7d e8 00          	cmp    DWORD PTR [ebp-0x18],0x0
+  606235:	75 32                	jne    606269 <eval+0x13f>
+  {
+      if ( (r=exec(shell_argv[0], shell_argv )) < 0 ) 
+  606237:	a1 40 70 60 00       	mov    eax,ds:0x607040
+  60623c:	c7 44 24 04 40 70 60 	mov    DWORD PTR [esp+0x4],0x607040
+  606243:	00 
+  606244:	89 04 24             	mov    DWORD PTR [esp],eax
+  606247:	e8 ac 05 00 00       	call   6067f8 <exec>
+  60624c:	89 45 e4             	mov    DWORD PTR [ebp-0x1c],eax
+  60624f:	83 7d e4 00          	cmp    DWORD PTR [ebp-0x1c],0x0
+  606253:	79 14                	jns    606269 <eval+0x13f>
+      {
+           exit(0) ;
+  606255:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  60625c:	e8 af fd ff ff       	call   606010 <exit>
+      }
+  }
+  return ;
+  606261:	eb 06                	jmp    606269 <eval+0x13f>
+  }
+  for (i=0 ; cmdline[i] != 0 ;)
+  {
+      if(!(is_uper(cmdline[i])||is_lower(cmdline[i])||cmdline[i]==' '||cmdline[i] == '-'||cmdline[i]=='/'||cmdline[i]=='.'))
+      {
+          return ;
+  606263:	90                   	nop
+  606264:	eb 04                	jmp    60626a <eval+0x140>
+      i++ ;
+  }
+  parseline( cmdline , shell_argv );
+  if ( shell_argv[0] == '\0' )
+  {
+      return ;
+  606266:	90                   	nop
+  606267:	eb 01                	jmp    60626a <eval+0x140>
+      if ( (r=exec(shell_argv[0], shell_argv )) < 0 ) 
+      {
+           exit(0) ;
+      }
+  }
+  return ;
+  606269:	90                   	nop
+}
+  60626a:	c9                   	leave  
+  60626b:	c3                   	ret    
+
+0060626c <parseline>:
+
+void parseline( u8_t *cmdline , u8_t **argv )
+{
+  60626c:	55                   	push   ebp
+  60626d:	89 e5                	mov    ebp,esp
+  60626f:	83 ec 28             	sub    esp,0x28
+  u8_t *p0, *p1 ;
+  i32_t argc = 0 , len  ;
+  606272:	c7 45 f0 00 00 00 00 	mov    DWORD PTR [ebp-0x10],0x0
+  p0  = cmdline ;
+  606279:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  60627c:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+  if ( p0 == NULL )
+  60627f:	83 7d f4 00          	cmp    DWORD PTR [ebp-0xc],0x0
+  606283:	75 6b                	jne    6062f0 <parseline+0x84>
+  {
+    printf(" cmd wrong ");
+  606285:	c7 04 24 10 6a 60 00 	mov    DWORD PTR [esp],0x606a10
+  60628c:	e8 7d 02 00 00       	call   60650e <printf>
+    return ;
+  606291:	eb 7a                	jmp    60630d <parseline+0xa1>
+  }
+  while( *p0 != 0 )
+  {
+     while( *p0 == ' ' ) 
+     {
+         p0++ ;
+  606293:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  606297:	eb 01                	jmp    60629a <parseline+0x2e>
+    printf(" cmd wrong ");
+    return ;
+  }
+  while( *p0 != 0 )
+  {
+     while( *p0 == ' ' ) 
+  606299:	90                   	nop
+  60629a:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  60629d:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6062a0:	3c 20                	cmp    al,0x20
+  6062a2:	74 ef                	je     606293 <parseline+0x27>
+     {
+         p0++ ;
+     }
+     if ( *p0 == 0 )
+  6062a4:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6062a7:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6062aa:	84 c0                	test   al,al
+  6062ac:	74 4f                	je     6062fd <parseline+0x91>
+     {
+        break ;
+     }
+     argv[argc++] = p0 ;
+  6062ae:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  6062b1:	c1 e0 02             	shl    eax,0x2
+  6062b4:	03 45 0c             	add    eax,DWORD PTR [ebp+0xc]
+  6062b7:	8b 55 f4             	mov    edx,DWORD PTR [ebp-0xc]
+  6062ba:	89 10                	mov    DWORD PTR [eax],edx
+  6062bc:	83 45 f0 01          	add    DWORD PTR [ebp-0x10],0x1
+     while( *p0!= ' '  && *p0 != 0 ) 
+  6062c0:	eb 04                	jmp    6062c6 <parseline+0x5a>
+     {
+         p0++;
+  6062c2:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+     if ( *p0 == 0 )
+     {
+        break ;
+     }
+     argv[argc++] = p0 ;
+     while( *p0!= ' '  && *p0 != 0 ) 
+  6062c6:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6062c9:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6062cc:	3c 20                	cmp    al,0x20
+  6062ce:	74 0a                	je     6062da <parseline+0x6e>
+  6062d0:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6062d3:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6062d6:	84 c0                	test   al,al
+  6062d8:	75 e8                	jne    6062c2 <parseline+0x56>
+     {
+         p0++;
+     }
+     if( *p0 == ' ' )
+  6062da:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6062dd:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6062e0:	3c 20                	cmp    al,0x20
+  6062e2:	75 0d                	jne    6062f1 <parseline+0x85>
+     {
+         *p0 = 0 ;
+  6062e4:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6062e7:	c6 00 00             	mov    BYTE PTR [eax],0x0
+         p0++;
+  6062ea:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  6062ee:	eb 01                	jmp    6062f1 <parseline+0x85>
+  if ( p0 == NULL )
+  {
+    printf(" cmd wrong ");
+    return ;
+  }
+  while( *p0 != 0 )
+  6062f0:	90                   	nop
+  6062f1:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6062f4:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6062f7:	84 c0                	test   al,al
+  6062f9:	75 9e                	jne    606299 <parseline+0x2d>
+  6062fb:	eb 01                	jmp    6062fe <parseline+0x92>
+     {
+         p0++ ;
+     }
+     if ( *p0 == 0 )
+     {
+        break ;
+  6062fd:	90                   	nop
+         *p0 = 0 ;
+         p0++;
+     }
+  }
+  //补充null
+  argv[argc]=0;
+  6062fe:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  606301:	c1 e0 02             	shl    eax,0x2
+  606304:	03 45 0c             	add    eax,DWORD PTR [ebp+0xc]
+  606307:	c7 00 00 00 00 00    	mov    DWORD PTR [eax],0x0
+}
+  60630d:	c9                   	leave  
+  60630e:	c3                   	ret    
+
+0060630f <build_command>:
+
+i32_t  build_command( u8_t *argv[] )
+{
+  60630f:	55                   	push   ebp
+  606310:	89 e5                	mov    ebp,esp
+  606312:	83 ec 28             	sub    esp,0x28
+   i32_t i = 0 , flag  = 0  ;
+  606315:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+  60631c:	c7 45 f0 00 00 00 00 	mov    DWORD PTR [ebp-0x10],0x0
+   for ( i = 0 ; i < BUILDIN_CMDS ;  ++i  )
+  606323:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+  60632a:	eb 2c                	jmp    606358 <build_command+0x49>
+   {
+     if ( !strcmp( build_cmd[i].cmdbuf , argv[0] ) )
+  60632c:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  60632f:	8b 10                	mov    edx,DWORD PTR [eax]
+  606331:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606334:	8b 04 c5 00 70 60 00 	mov    eax,DWORD PTR [eax*8+0x607000]
+  60633b:	89 54 24 04          	mov    DWORD PTR [esp+0x4],edx
+  60633f:	89 04 24             	mov    DWORD PTR [esp],eax
+  606342:	e8 84 03 00 00       	call   6066cb <strcmp>
+  606347:	85 c0                	test   eax,eax
+  606349:	75 09                	jne    606354 <build_command+0x45>
+     {
+           flag = 1;
+  60634b:	c7 45 f0 01 00 00 00 	mov    DWORD PTR [ebp-0x10],0x1
+           break ;
+  606352:	eb 0a                	jmp    60635e <build_command+0x4f>
+}
+
+i32_t  build_command( u8_t *argv[] )
+{
+   i32_t i = 0 , flag  = 0  ;
+   for ( i = 0 ; i < BUILDIN_CMDS ;  ++i  )
+  606354:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  606358:	83 7d f4 03          	cmp    DWORD PTR [ebp-0xc],0x3
+  60635c:	7e ce                	jle    60632c <build_command+0x1d>
+     {
+           flag = 1;
+           break ;
+     }
+   }
+   return ( flag == 1 ) ? i : -1 ;
+  60635e:	83 7d f0 01          	cmp    DWORD PTR [ebp-0x10],0x1
+  606362:	75 05                	jne    606369 <build_command+0x5a>
+  606364:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606367:	eb 05                	jmp    60636e <build_command+0x5f>
+  606369:	b8 ff ff ff ff       	mov    eax,0xffffffff
+}
+  60636e:	c9                   	leave  
+  60636f:	c3                   	ret    
+
+00606370 <is_uper>:
+
+i32_t  is_uper( u8_t ch )
+{
+  606370:	55                   	push   ebp
+  606371:	89 e5                	mov    ebp,esp
+  606373:	83 ec 04             	sub    esp,0x4
+  606376:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606379:	88 45 fc             	mov    BYTE PTR [ebp-0x4],al
+  return (ch>='A'&&ch<='Z')?1:0 ;
+  60637c:	80 7d fc 40          	cmp    BYTE PTR [ebp-0x4],0x40
+  606380:	76 0d                	jbe    60638f <is_uper+0x1f>
+  606382:	80 7d fc 5a          	cmp    BYTE PTR [ebp-0x4],0x5a
+  606386:	77 07                	ja     60638f <is_uper+0x1f>
+  606388:	b8 01 00 00 00       	mov    eax,0x1
+  60638d:	eb 05                	jmp    606394 <is_uper+0x24>
+  60638f:	b8 00 00 00 00       	mov    eax,0x0
+}
+  606394:	c9                   	leave  
+  606395:	c3                   	ret    
+
+00606396 <is_lower>:
+
+i32_t  is_lower( u8_t ch )
+{
+  606396:	55                   	push   ebp
+  606397:	89 e5                	mov    ebp,esp
+  606399:	83 ec 04             	sub    esp,0x4
+  60639c:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  60639f:	88 45 fc             	mov    BYTE PTR [ebp-0x4],al
+    return ( ch>='a'&&ch<='z')?1:0;
+  6063a2:	80 7d fc 60          	cmp    BYTE PTR [ebp-0x4],0x60
+  6063a6:	76 0d                	jbe    6063b5 <is_lower+0x1f>
+  6063a8:	80 7d fc 7a          	cmp    BYTE PTR [ebp-0x4],0x7a
+  6063ac:	77 07                	ja     6063b5 <is_lower+0x1f>
+  6063ae:	b8 01 00 00 00       	mov    eax,0x1
+  6063b3:	eb 05                	jmp    6063ba <is_lower+0x24>
+  6063b5:	b8 00 00 00 00       	mov    eax,0x0
+}
+  6063ba:	c9                   	leave  
+  6063bb:	c3                   	ret    
+
+006063bc <putc>:
+message put_msg ;
+
+void _flush() ;
+
+void  putc( u8_t ch )
+{
+  6063bc:	55                   	push   ebp
+  6063bd:	89 e5                	mov    ebp,esp
+  6063bf:	83 ec 18             	sub    esp,0x18
+  6063c2:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  6063c5:	88 45 f4             	mov    BYTE PTR [ebp-0xc],al
+  print_buf[buf_count++] = ch ;
+  6063c8:	a1 20 70 60 00       	mov    eax,ds:0x607020
+  6063cd:	0f b6 55 f4          	movzx  edx,BYTE PTR [ebp-0xc]
+  6063d1:	88 90 00 72 60 00    	mov    BYTE PTR [eax+0x607200],dl
+  6063d7:	83 c0 01             	add    eax,0x1
+  6063da:	a3 20 70 60 00       	mov    ds:0x607020,eax
+  if ( buf_count == BUF_SIZE )
+  6063df:	a1 20 70 60 00       	mov    eax,ds:0x607020
+  6063e4:	83 f8 64             	cmp    eax,0x64
+  6063e7:	75 05                	jne    6063ee <putc+0x32>
+  {
+	_flush();
+  6063e9:	e8 0d 00 00 00       	call   6063fb <_flush>
+  }
+  if ( ch == '\n' )
+  6063ee:	80 7d f4 0a          	cmp    BYTE PTR [ebp-0xc],0xa
+  6063f2:	75 05                	jne    6063f9 <putc+0x3d>
+  {
+       _flush();
+  6063f4:	e8 02 00 00 00       	call   6063fb <_flush>
+  }
+}
+  6063f9:	c9                   	leave  
+  6063fa:	c3                   	ret    
+
+006063fb <_flush>:
+
+void _flush()
+{
+  6063fb:	55                   	push   ebp
+  6063fc:	89 e5                	mov    ebp,esp
+  6063fe:	83 ec 18             	sub    esp,0x18
+    if ( buf_count == 0 )
+  606401:	a1 20 70 60 00       	mov    eax,ds:0x607020
+  606406:	85 c0                	test   eax,eax
+  606408:	74 53                	je     60645d <_flush+0x62>
+    {
+	return ;
+    }
+    //这里的buf_count还有区别
+    put_msg.m_type      = TTY_WRITE  ;
+  60640a:	c7 05 c4 71 60 00 02 	mov    DWORD PTR ds:0x6071c4,0x2
+  606411:	00 00 00 
+    put_msg.TTY_PROC_NR = 2 ;
+  606414:	c7 05 cc 71 60 00 02 	mov    DWORD PTR ds:0x6071cc,0x2
+  60641b:	00 00 00 
+    put_msg.TTY_LINE    = 0 ;
+  60641e:	c7 05 c8 71 60 00 00 	mov    DWORD PTR ds:0x6071c8,0x0
+  606425:	00 00 00 
+    put_msg.TTY_ADDRESS = print_buf ;
+  606428:	c7 05 dc 71 60 00 00 	mov    DWORD PTR ds:0x6071dc,0x607200
+  60642f:	72 60 00 
+    put_msg.TTY_COUNT   = buf_count ;
+  606432:	a1 20 70 60 00       	mov    eax,ds:0x607020
+  606437:	a3 d0 71 60 00       	mov    ds:0x6071d0,eax
+    buf_count           = 0 ;
+  60643c:	c7 05 20 70 60 00 00 	mov    DWORD PTR ds:0x607020,0x0
+  606443:	00 00 00 
+    sendrec(TTY_TASK,&put_msg);
+  606446:	c7 44 24 04 c0 71 60 	mov    DWORD PTR [esp+0x4],0x6071c0
+  60644d:	00 
+  60644e:	c7 04 24 fb ff ff ff 	mov    DWORD PTR [esp],0xfffffffb
+  606455:	e8 06 00 00 00       	call   606460 <sendrec>
+    return ;
+  60645a:	90                   	nop
+  60645b:	eb 01                	jmp    60645e <_flush+0x63>
+
+void _flush()
+{
+    if ( buf_count == 0 )
+    {
+	return ;
+  60645d:	90                   	nop
+    put_msg.TTY_ADDRESS = print_buf ;
+    put_msg.TTY_COUNT   = buf_count ;
+    buf_count           = 0 ;
+    sendrec(TTY_TASK,&put_msg);
+    return ;
+}
+  60645e:	c9                   	leave  
+  60645f:	c3                   	ret    
+
+00606460 <sendrec>:
+  606460:	55                   	push   ebp
+  606461:	89 e5                	mov    ebp,esp
+  606463:	8b 5d 0c             	mov    ebx,DWORD PTR [ebp+0xc]
+  606466:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  606469:	b9 03 00 00 00       	mov    ecx,0x3
+  60646e:	cd 80                	int    0x80
+  606470:	89 ec                	mov    esp,ebp
+  606472:	5d                   	pop    ebp
+  606473:	c3                   	ret    
+
+00606474 <itoa>:
+  606474:	55                   	push   ebp
+  606475:	89 e5                	mov    ebp,esp
+  606477:	53                   	push   ebx
+  606478:	83 ec 10             	sub    esp,0x10
+  60647b:	c7 45 f8 20 00 00 00 	mov    DWORD PTR [ebp-0x8],0x20
+  606482:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+  606489:	c6 45 f3 00          	mov    BYTE PTR [ebp-0xd],0x0
+  60648d:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+  606494:	eb 61                	jmp    6064f7 <itoa+0x83>
+  606496:	83 6d f8 04          	sub    DWORD PTR [ebp-0x8],0x4
+  60649a:	8b 45 f8             	mov    eax,DWORD PTR [ebp-0x8]
+  60649d:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  6064a0:	89 d3                	mov    ebx,edx
+  6064a2:	89 c1                	mov    ecx,eax
+  6064a4:	d3 fb                	sar    ebx,cl
+  6064a6:	89 d8                	mov    eax,ebx
+  6064a8:	83 e0 0f             	and    eax,0xf
+  6064ab:	88 45 f2             	mov    BYTE PTR [ebp-0xe],al
+  6064ae:	80 7d f2 00          	cmp    BYTE PTR [ebp-0xe],0x0
+  6064b2:	75 06                	jne    6064ba <itoa+0x46>
+  6064b4:	80 7d f3 00          	cmp    BYTE PTR [ebp-0xd],0x0
+  6064b8:	74 38                	je     6064f2 <itoa+0x7e>
+  6064ba:	80 7d f2 09          	cmp    BYTE PTR [ebp-0xe],0x9
+  6064be:	7e 16                	jle    6064d6 <itoa+0x62>
+  6064c0:	0f be 45 f3          	movsx  eax,BYTE PTR [ebp-0xd]
+  6064c4:	03 45 0c             	add    eax,DWORD PTR [ebp+0xc]
+  6064c7:	0f b6 55 f2          	movzx  edx,BYTE PTR [ebp-0xe]
+  6064cb:	83 c2 37             	add    edx,0x37
+  6064ce:	88 10                	mov    BYTE PTR [eax],dl
+  6064d0:	80 45 f3 01          	add    BYTE PTR [ebp-0xd],0x1
+  6064d4:	eb 1d                	jmp    6064f3 <itoa+0x7f>
+  6064d6:	80 7d f2 09          	cmp    BYTE PTR [ebp-0xe],0x9
+  6064da:	7f 17                	jg     6064f3 <itoa+0x7f>
+  6064dc:	0f be 45 f3          	movsx  eax,BYTE PTR [ebp-0xd]
+  6064e0:	03 45 0c             	add    eax,DWORD PTR [ebp+0xc]
+  6064e3:	0f b6 55 f2          	movzx  edx,BYTE PTR [ebp-0xe]
+  6064e7:	83 c2 30             	add    edx,0x30
+  6064ea:	88 10                	mov    BYTE PTR [eax],dl
+  6064ec:	80 45 f3 01          	add    BYTE PTR [ebp-0xd],0x1
+  6064f0:	eb 01                	jmp    6064f3 <itoa+0x7f>
+  6064f2:	90                   	nop
+  6064f3:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  6064f7:	83 7d f4 07          	cmp    DWORD PTR [ebp-0xc],0x7
+  6064fb:	7e 99                	jle    606496 <itoa+0x22>
+  6064fd:	0f be 45 f3          	movsx  eax,BYTE PTR [ebp-0xd]
+  606501:	03 45 0c             	add    eax,DWORD PTR [ebp+0xc]
+  606504:	c6 00 00             	mov    BYTE PTR [eax],0x0
+  606507:	90                   	nop
+  606508:	83 c4 10             	add    esp,0x10
+  60650b:	5b                   	pop    ebx
+  60650c:	5d                   	pop    ebp
+  60650d:	c3                   	ret    
+
+0060650e <printf>:
+  60650e:	55                   	push   ebp
+  60650f:	89 e5                	mov    ebp,esp
+  606511:	83 ec 38             	sub    esp,0x38
+  606514:	8d 45 08             	lea    eax,[ebp+0x8]
+  606517:	83 c0 04             	add    eax,0x4
+  60651a:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+  60651d:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606520:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+  606523:	e9 e5 00 00 00       	jmp    60660d <printf+0xff>
+  606528:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  60652b:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  60652e:	3c 25                	cmp    al,0x25
+  606530:	74 1a                	je     60654c <printf+0x3e>
+  606532:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606535:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  606538:	0f b6 c0             	movzx  eax,al
+  60653b:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  60653f:	89 04 24             	mov    DWORD PTR [esp],eax
+  606542:	e8 75 fe ff ff       	call   6063bc <putc>
+  606547:	e9 c1 00 00 00       	jmp    60660d <printf+0xff>
+  60654c:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  606550:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606553:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  606556:	0f b6 c0             	movzx  eax,al
+  606559:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  60655d:	83 f8 64             	cmp    eax,0x64
+  606560:	74 0a                	je     60656c <printf+0x5e>
+  606562:	83 f8 73             	cmp    eax,0x73
+  606565:	74 6d                	je     6065d4 <printf+0xc6>
+  606567:	e9 9a 00 00 00       	jmp    606606 <printf+0xf8>
+  60656c:	83 45 e8 04          	add    DWORD PTR [ebp-0x18],0x4
+  606570:	8b 45 e8             	mov    eax,DWORD PTR [ebp-0x18]
+  606573:	83 e8 04             	sub    eax,0x4
+  606576:	8b 00                	mov    eax,DWORD PTR [eax]
+  606578:	89 45 e4             	mov    DWORD PTR [ebp-0x1c],eax
+  60657b:	c6 05 24 70 60 00 30 	mov    BYTE PTR ds:0x607024,0x30
+  606582:	c6 05 25 70 60 00 78 	mov    BYTE PTR ds:0x607025,0x78
+  606589:	b8 24 70 60 00       	mov    eax,0x607024
+  60658e:	83 c0 02             	add    eax,0x2
+  606591:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  606595:	8b 45 e4             	mov    eax,DWORD PTR [ebp-0x1c]
+  606598:	89 04 24             	mov    DWORD PTR [esp],eax
+  60659b:	e8 d4 fe ff ff       	call   606474 <itoa>
+  6065a0:	c7 45 ec 00 00 00 00 	mov    DWORD PTR [ebp-0x14],0x0
+  6065a7:	eb 1a                	jmp    6065c3 <printf+0xb5>
+  6065a9:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+  6065ac:	05 24 70 60 00       	add    eax,0x607024
+  6065b1:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6065b4:	0f b6 c0             	movzx  eax,al
+  6065b7:	83 45 ec 01          	add    DWORD PTR [ebp-0x14],0x1
+  6065bb:	89 04 24             	mov    DWORD PTR [esp],eax
+  6065be:	e8 f9 fd ff ff       	call   6063bc <putc>
+  6065c3:	8b 45 ec             	mov    eax,DWORD PTR [ebp-0x14]
+  6065c6:	05 24 70 60 00       	add    eax,0x607024
+  6065cb:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6065ce:	84 c0                	test   al,al
+  6065d0:	75 d7                	jne    6065a9 <printf+0x9b>
+  6065d2:	eb 39                	jmp    60660d <printf+0xff>
+  6065d4:	83 45 e8 04          	add    DWORD PTR [ebp-0x18],0x4
+  6065d8:	8b 45 e8             	mov    eax,DWORD PTR [ebp-0x18]
+  6065db:	83 e8 04             	sub    eax,0x4
+  6065de:	8b 00                	mov    eax,DWORD PTR [eax]
+  6065e0:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+  6065e3:	eb 15                	jmp    6065fa <printf+0xec>
+  6065e5:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  6065e8:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  6065eb:	0f b6 c0             	movzx  eax,al
+  6065ee:	83 45 f0 01          	add    DWORD PTR [ebp-0x10],0x1
+  6065f2:	89 04 24             	mov    DWORD PTR [esp],eax
+  6065f5:	e8 c2 fd ff ff       	call   6063bc <putc>
+  6065fa:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  6065fd:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  606600:	84 c0                	test   al,al
+  606602:	75 e1                	jne    6065e5 <printf+0xd7>
+  606604:	eb 07                	jmp    60660d <printf+0xff>
+  606606:	b8 01 00 00 00       	mov    eax,0x1
+  60660b:	eb 18                	jmp    606625 <printf+0x117>
+  60660d:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606610:	0f b6 00             	movzx  eax,BYTE PTR [eax]
+  606613:	84 c0                	test   al,al
+  606615:	0f 85 0d ff ff ff    	jne    606528 <printf+0x1a>
+  60661b:	e8 db fd ff ff       	call   6063fb <_flush>
+  606620:	b8 00 00 00 00       	mov    eax,0x0
+  606625:	c9                   	leave  
+  606626:	c3                   	ret    
+  606627:	90                   	nop
+
+00606628 <strcpy>:
+  606628:	55                   	push   ebp
+  606629:	89 e5                	mov    ebp,esp
+  60662b:	57                   	push   edi
+  60662c:	56                   	push   esi
+  60662d:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  606630:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  606633:	89 c6                	mov    esi,eax
+  606635:	89 d7                	mov    edi,edx
+  606637:	fc                   	cld    
+  606638:	ac                   	lods   al,BYTE PTR ds:[esi]
+  606639:	aa                   	stos   BYTE PTR es:[edi],al
+  60663a:	84 c0                	test   al,al
+  60663c:	75 fa                	jne    606638 <strcpy+0x10>
+  60663e:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606641:	5e                   	pop    esi
+  606642:	5f                   	pop    edi
+  606643:	5d                   	pop    ebp
+  606644:	c3                   	ret    
+
+00606645 <strncpy>:
+  606645:	55                   	push   ebp
+  606646:	89 e5                	mov    ebp,esp
+  606648:	57                   	push   edi
+  606649:	56                   	push   esi
+  60664a:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  60664d:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  606650:	8b 4d 10             	mov    ecx,DWORD PTR [ebp+0x10]
+  606653:	89 c6                	mov    esi,eax
+  606655:	89 d7                	mov    edi,edx
+  606657:	fc                   	cld    
+  606658:	49                   	dec    ecx
+  606659:	78 08                	js     606663 <strncpy+0x1e>
+  60665b:	ac                   	lods   al,BYTE PTR ds:[esi]
+  60665c:	aa                   	stos   BYTE PTR es:[edi],al
+  60665d:	84 c0                	test   al,al
+  60665f:	75 f7                	jne    606658 <strncpy+0x13>
+  606661:	f3 aa                	rep stos BYTE PTR es:[edi],al
+  606663:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606666:	5e                   	pop    esi
+  606667:	5f                   	pop    edi
+  606668:	5d                   	pop    ebp
+  606669:	c3                   	ret    
+
+0060666a <strcat>:
+  60666a:	55                   	push   ebp
+  60666b:	89 e5                	mov    ebp,esp
+  60666d:	57                   	push   edi
+  60666e:	56                   	push   esi
+  60666f:	53                   	push   ebx
+  606670:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc]
+  606673:	8b 5d 08             	mov    ebx,DWORD PTR [ebp+0x8]
+  606676:	b8 00 00 00 00       	mov    eax,0x0
+  60667b:	b9 ff ff ff ff       	mov    ecx,0xffffffff
+  606680:	89 d6                	mov    esi,edx
+  606682:	89 df                	mov    edi,ebx
+  606684:	fc                   	cld    
+  606685:	f2 ae                	repnz scas al,BYTE PTR es:[edi]
+  606687:	4f                   	dec    edi
+  606688:	ac                   	lods   al,BYTE PTR ds:[esi]
+  606689:	aa                   	stos   BYTE PTR es:[edi],al
+  60668a:	84 c0                	test   al,al
+  60668c:	75 fa                	jne    606688 <strcat+0x1e>
+  60668e:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606691:	5b                   	pop    ebx
+  606692:	5e                   	pop    esi
+  606693:	5f                   	pop    edi
+  606694:	5d                   	pop    ebp
+  606695:	c3                   	ret    
+
+00606696 <strncat>:
+  606696:	55                   	push   ebp
+  606697:	89 e5                	mov    ebp,esp
+  606699:	57                   	push   edi
+  60669a:	56                   	push   esi
+  60669b:	53                   	push   ebx
+  60669c:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc]
+  60669f:	8b 5d 08             	mov    ebx,DWORD PTR [ebp+0x8]
+  6066a2:	b8 00 00 00 00       	mov    eax,0x0
+  6066a7:	b9 ff ff ff ff       	mov    ecx,0xffffffff
+  6066ac:	89 d6                	mov    esi,edx
+  6066ae:	89 df                	mov    edi,ebx
+  6066b0:	fc                   	cld    
+  6066b1:	f2 ae                	repnz scas al,BYTE PTR es:[edi]
+  6066b3:	4f                   	dec    edi
+  6066b4:	8b 4d 10             	mov    ecx,DWORD PTR [ebp+0x10]
+  6066b7:	49                   	dec    ecx
+  6066b8:	78 06                	js     6066c0 <strncat+0x2a>
+  6066ba:	ac                   	lods   al,BYTE PTR ds:[esi]
+  6066bb:	aa                   	stos   BYTE PTR es:[edi],al
+  6066bc:	84 c0                	test   al,al
+  6066be:	75 f7                	jne    6066b7 <strncat+0x21>
+  6066c0:	31 c0                	xor    eax,eax
+  6066c2:	aa                   	stos   BYTE PTR es:[edi],al
+  6066c3:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  6066c6:	5b                   	pop    ebx
+  6066c7:	5e                   	pop    esi
+  6066c8:	5f                   	pop    edi
+  6066c9:	5d                   	pop    ebp
+  6066ca:	c3                   	ret    
+
+006066cb <strcmp>:
+  6066cb:	55                   	push   ebp
+  6066cc:	89 e5                	mov    ebp,esp
+  6066ce:	57                   	push   edi
+  6066cf:	56                   	push   esi
+  6066d0:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  6066d3:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc]
+  6066d6:	89 c7                	mov    edi,eax
+  6066d8:	89 d6                	mov    esi,edx
+  6066da:	fc                   	cld    
+  6066db:	ac                   	lods   al,BYTE PTR ds:[esi]
+  6066dc:	ae                   	scas   al,BYTE PTR es:[edi]
+  6066dd:	75 08                	jne    6066e7 <strcmp+0x1c>
+  6066df:	84 c0                	test   al,al
+  6066e1:	75 f8                	jne    6066db <strcmp+0x10>
+  6066e3:	31 c0                	xor    eax,eax
+  6066e5:	eb 09                	jmp    6066f0 <strcmp+0x25>
+  6066e7:	b8 01 00 00 00       	mov    eax,0x1
+  6066ec:	7c 02                	jl     6066f0 <strcmp+0x25>
+  6066ee:	f7 d8                	neg    eax
+  6066f0:	5e                   	pop    esi
+  6066f1:	5f                   	pop    edi
+  6066f2:	5d                   	pop    ebp
+  6066f3:	c3                   	ret    
+
+006066f4 <strncmp>:
+  6066f4:	55                   	push   ebp
+  6066f5:	89 e5                	mov    ebp,esp
+  6066f7:	57                   	push   edi
+  6066f8:	56                   	push   esi
+  6066f9:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  6066fc:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc]
+  6066ff:	8b 4d 10             	mov    ecx,DWORD PTR [ebp+0x10]
+  606702:	89 c7                	mov    edi,eax
+  606704:	89 d6                	mov    esi,edx
+  606706:	fc                   	cld    
+  606707:	49                   	dec    ecx
+  606708:	78 08                	js     606712 <strncmp+0x1e>
+  60670a:	ac                   	lods   al,BYTE PTR ds:[esi]
+  60670b:	ae                   	scas   al,BYTE PTR es:[edi]
+  60670c:	75 08                	jne    606716 <strncmp+0x22>
+  60670e:	84 c0                	test   al,al
+  606710:	75 f5                	jne    606707 <strncmp+0x13>
+  606712:	31 c0                	xor    eax,eax
+  606714:	eb 09                	jmp    60671f <strncmp+0x2b>
+  606716:	b8 01 00 00 00       	mov    eax,0x1
+  60671b:	7c 02                	jl     60671f <strncmp+0x2b>
+  60671d:	f7 d8                	neg    eax
+  60671f:	5e                   	pop    esi
+  606720:	5f                   	pop    edi
+  606721:	5d                   	pop    ebp
+  606722:	c3                   	ret    
+
+00606723 <strlen>:
+  606723:	55                   	push   ebp
+  606724:	89 e5                	mov    ebp,esp
+  606726:	57                   	push   edi
+  606727:	53                   	push   ebx
+  606728:	83 ec 04             	sub    esp,0x4
+  60672b:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  60672e:	b8 00 00 00 00       	mov    eax,0x0
+  606733:	c7 45 f4 ff ff ff ff 	mov    DWORD PTR [ebp-0xc],0xffffffff
+  60673a:	8b 4d f4             	mov    ecx,DWORD PTR [ebp-0xc]
+  60673d:	89 d7                	mov    edi,edx
+  60673f:	fc                   	cld    
+  606740:	f2 ae                	repnz scas al,BYTE PTR es:[edi]
+  606742:	f7 d1                	not    ecx
+  606744:	49                   	dec    ecx
+  606745:	89 cb                	mov    ebx,ecx
+  606747:	89 d8                	mov    eax,ebx
+  606749:	83 c4 04             	add    esp,0x4
+  60674c:	5b                   	pop    ebx
+  60674d:	5f                   	pop    edi
+  60674e:	5d                   	pop    ebp
+  60674f:	c3                   	ret    
+
+00606750 <memcpy>:
+  606750:	55                   	push   ebp
+  606751:	89 e5                	mov    ebp,esp
+  606753:	57                   	push   edi
+  606754:	56                   	push   esi
+  606755:	53                   	push   ebx
+  606756:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+  606759:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc]
+  60675c:	8b 5d 08             	mov    ebx,DWORD PTR [ebp+0x8]
+  60675f:	89 c1                	mov    ecx,eax
+  606761:	89 d6                	mov    esi,edx
+  606763:	89 df                	mov    edi,ebx
+  606765:	fc                   	cld    
+  606766:	f3 a4                	rep movs BYTE PTR es:[edi],BYTE PTR ds:[esi]
+  606768:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  60676b:	5b                   	pop    ebx
+  60676c:	5e                   	pop    esi
+  60676d:	5f                   	pop    edi
+  60676e:	5d                   	pop    ebp
+  60676f:	c3                   	ret    
+
+00606770 <memset>:
+  606770:	55                   	push   ebp
+  606771:	89 e5                	mov    ebp,esp
+  606773:	57                   	push   edi
+  606774:	83 ec 04             	sub    esp,0x4
+  606777:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  60677a:	88 45 f8             	mov    BYTE PTR [ebp-0x8],al
+  60677d:	0f b6 45 f8          	movzx  eax,BYTE PTR [ebp-0x8]
+  606781:	8b 55 08             	mov    edx,DWORD PTR [ebp+0x8]
+  606784:	8b 4d 10             	mov    ecx,DWORD PTR [ebp+0x10]
+  606787:	89 d7                	mov    edi,edx
+  606789:	fc                   	cld    
+  60678a:	f3 aa                	rep stos BYTE PTR es:[edi],al
+  60678c:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  60678f:	83 c4 04             	add    esp,0x4
+  606792:	5f                   	pop    edi
+  606793:	5d                   	pop    ebp
+  606794:	c3                   	ret    
+  606795:	90                   	nop
+  606796:	90                   	nop
+  606797:	90                   	nop
+
+00606798 <fork>:
+  606798:	55                   	push   ebp
+  606799:	89 e5                	mov    ebp,esp
+  60679b:	83 ec 48             	sub    esp,0x48
+  60679e:	c7 45 d8 02 00 00 00 	mov    DWORD PTR [ebp-0x28],0x2
+  6067a5:	8d 45 d4             	lea    eax,[ebp-0x2c]
+  6067a8:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  6067ac:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  6067b3:	e8 a8 fc ff ff       	call   606460 <sendrec>
+  6067b8:	8b 45 d8             	mov    eax,DWORD PTR [ebp-0x28]
+  6067bb:	c9                   	leave  
+  6067bc:	c3                   	ret    
+  6067bd:	90                   	nop
+  6067be:	90                   	nop
+  6067bf:	90                   	nop
+
+006067c0 <read>:
+  6067c0:	55                   	push   ebp
+  6067c1:	89 e5                	mov    ebp,esp
+  6067c3:	83 ec 48             	sub    esp,0x48
+  6067c6:	c7 45 d8 03 00 00 00 	mov    DWORD PTR [ebp-0x28],0x3
+  6067cd:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  6067d0:	89 45 dc             	mov    DWORD PTR [ebp-0x24],eax
+  6067d3:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  6067d6:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+  6067d9:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+  6067dc:	89 45 e0             	mov    DWORD PTR [ebp-0x20],eax
+  6067df:	8d 45 d4             	lea    eax,[ebp-0x2c]
+  6067e2:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  6067e6:	c7 04 24 01 00 00 00 	mov    DWORD PTR [esp],0x1
+  6067ed:	e8 6e fc ff ff       	call   606460 <sendrec>
+  6067f2:	8b 45 d8             	mov    eax,DWORD PTR [ebp-0x28]
+  6067f5:	c9                   	leave  
+  6067f6:	c3                   	ret    
+  6067f7:	90                   	nop
+
+006067f8 <exec>:
+  6067f8:	55                   	push   ebp
+  6067f9:	89 e5                	mov    ebp,esp
+  6067fb:	83 ec 48             	sub    esp,0x48
+  6067fe:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [ebp-0xc],0x0
+  606805:	c7 45 d0 25 00 00 00 	mov    DWORD PTR [ebp-0x30],0x25
+  60680c:	c7 45 e0 80 72 60 00 	mov    DWORD PTR [ebp-0x20],0x607280
+  606813:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  606816:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+  606819:	eb 3f                	jmp    60685a <exec+0x62>
+  60681b:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  60681e:	8b 00                	mov    eax,DWORD PTR [eax]
+  606820:	b9 80 72 60 00       	mov    ecx,0x607280
+  606825:	8b 55 f4             	mov    edx,DWORD PTR [ebp-0xc]
+  606828:	8d 14 11             	lea    edx,[ecx+edx*1]
+  60682b:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  60682f:	89 14 24             	mov    DWORD PTR [esp],edx
+  606832:	e8 f1 fd ff ff       	call   606628 <strcpy>
+  606837:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  60683a:	8b 00                	mov    eax,DWORD PTR [eax]
+  60683c:	89 04 24             	mov    DWORD PTR [esp],eax
+  60683f:	e8 df fe ff ff       	call   606723 <strlen>
+  606844:	01 45 f4             	add    DWORD PTR [ebp-0xc],eax
+  606847:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  60684a:	05 80 72 60 00       	add    eax,0x607280
+  60684f:	c6 00 20             	mov    BYTE PTR [eax],0x20
+  606852:	83 45 f0 04          	add    DWORD PTR [ebp-0x10],0x4
+  606856:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  60685a:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  60685d:	8b 00                	mov    eax,DWORD PTR [eax]
+  60685f:	85 c0                	test   eax,eax
+  606861:	75 b8                	jne    60681b <exec+0x23>
+  606863:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  606866:	89 45 d4             	mov    DWORD PTR [ebp-0x2c],eax
+  606869:	8d 45 cc             	lea    eax,[ebp-0x34]
+  60686c:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  606870:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  606877:	e8 e4 fb ff ff       	call   606460 <sendrec>
+  60687c:	8b 45 d0             	mov    eax,DWORD PTR [ebp-0x30]
+  60687f:	c9                   	leave  
+  606880:	c3                   	ret    
+
+00606881 <mm_exec>:
+  606881:	55                   	push   ebp
+  606882:	89 e5                	mov    ebp,esp
+  606884:	83 ec 48             	sub    esp,0x48
+  606887:	c7 45 f4 ff ff ff ff 	mov    DWORD PTR [ebp-0xc],0xffffffff
+  60688e:	c7 45 d0 2a 00 00 00 	mov    DWORD PTR [ebp-0x30],0x2a
+  606895:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  606898:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+  60689b:	eb 3f                	jmp    6068dc <mm_exec+0x5b>
+  60689d:	83 45 f4 01          	add    DWORD PTR [ebp-0xc],0x1
+  6068a1:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  6068a4:	8b 00                	mov    eax,DWORD PTR [eax]
+  6068a6:	b9 80 72 60 00       	mov    ecx,0x607280
+  6068ab:	8b 55 f4             	mov    edx,DWORD PTR [ebp-0xc]
+  6068ae:	8d 14 11             	lea    edx,[ecx+edx*1]
+  6068b1:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  6068b5:	89 14 24             	mov    DWORD PTR [esp],edx
+  6068b8:	e8 6b fd ff ff       	call   606628 <strcpy>
+  6068bd:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  6068c0:	8b 00                	mov    eax,DWORD PTR [eax]
+  6068c2:	89 04 24             	mov    DWORD PTR [esp],eax
+  6068c5:	e8 59 fe ff ff       	call   606723 <strlen>
+  6068ca:	01 45 f4             	add    DWORD PTR [ebp-0xc],eax
+  6068cd:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6068d0:	05 80 72 60 00       	add    eax,0x607280
+  6068d5:	c6 00 20             	mov    BYTE PTR [eax],0x20
+  6068d8:	83 45 f0 04          	add    DWORD PTR [ebp-0x10],0x4
+  6068dc:	8b 45 f0             	mov    eax,DWORD PTR [ebp-0x10]
+  6068df:	8b 00                	mov    eax,DWORD PTR [eax]
+  6068e1:	85 c0                	test   eax,eax
+  6068e3:	75 b8                	jne    60689d <mm_exec+0x1c>
+  6068e5:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6068e8:	05 80 72 60 00       	add    eax,0x607280
+  6068ed:	c6 00 00             	mov    BYTE PTR [eax],0x0
+  6068f0:	c7 45 e0 80 72 60 00 	mov    DWORD PTR [ebp-0x20],0x607280
+  6068f7:	8b 45 f4             	mov    eax,DWORD PTR [ebp-0xc]
+  6068fa:	89 45 d4             	mov    DWORD PTR [ebp-0x2c],eax
+  6068fd:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606900:	8d 55 cc             	lea    edx,[ebp-0x34]
+  606903:	89 54 24 04          	mov    DWORD PTR [esp+0x4],edx
+  606907:	89 04 24             	mov    DWORD PTR [esp],eax
+  60690a:	e8 51 fb ff ff       	call   606460 <sendrec>
+  60690f:	8b 45 d0             	mov    eax,DWORD PTR [ebp-0x30]
+  606912:	c9                   	leave  
+  606913:	c3                   	ret    
+
+00606914 <open>:
+  606914:	55                   	push   ebp
+  606915:	89 e5                	mov    ebp,esp
+  606917:	83 ec 48             	sub    esp,0x48
+  60691a:	c7 45 d8 05 00 00 00 	mov    DWORD PTR [ebp-0x28],0x5
+  606921:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606924:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+  606927:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  60692a:	89 45 dc             	mov    DWORD PTR [ebp-0x24],eax
+  60692d:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606930:	89 04 24             	mov    DWORD PTR [esp],eax
+  606933:	e8 eb fd ff ff       	call   606723 <strlen>
+  606938:	83 c0 01             	add    eax,0x1
+  60693b:	89 45 e0             	mov    DWORD PTR [ebp-0x20],eax
+  60693e:	8d 45 d4             	lea    eax,[ebp-0x2c]
+  606941:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  606945:	c7 04 24 01 00 00 00 	mov    DWORD PTR [esp],0x1
+  60694c:	e8 0f fb ff ff       	call   606460 <sendrec>
+  606951:	8b 45 d8             	mov    eax,DWORD PTR [ebp-0x28]
+  606954:	c9                   	leave  
+  606955:	c3                   	ret    
+  606956:	90                   	nop
+  606957:	90                   	nop
+
+00606958 <mknode>:
+  606958:	55                   	push   ebp
+  606959:	89 e5                	mov    ebp,esp
+  60695b:	83 ec 48             	sub    esp,0x48
+  60695e:	c7 45 d8 0d 00 00 00 	mov    DWORD PTR [ebp-0x28],0xd
+  606965:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606968:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+  60696b:	8b 45 10             	mov    eax,DWORD PTR [ebp+0x10]
+  60696e:	89 45 dc             	mov    DWORD PTR [ebp-0x24],eax
+  606971:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
+  606974:	89 04 24             	mov    DWORD PTR [esp],eax
+  606977:	e8 a7 fd ff ff       	call   606723 <strlen>
+  60697c:	83 c0 01             	add    eax,0x1
+  60697f:	89 45 e4             	mov    DWORD PTR [ebp-0x1c],eax
+  606982:	8b 45 14             	mov    eax,DWORD PTR [ebp+0x14]
+  606985:	89 45 e0             	mov    DWORD PTR [ebp-0x20],eax
+  606988:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
+  60698b:	89 45 e8             	mov    DWORD PTR [ebp-0x18],eax
+  60698e:	8d 45 d4             	lea    eax,[ebp-0x2c]
+  606991:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  606995:	c7 04 24 01 00 00 00 	mov    DWORD PTR [esp],0x1
+  60699c:	e8 bf fa ff ff       	call   606460 <sendrec>
+  6069a1:	c9                   	leave  
+  6069a2:	c3                   	ret    

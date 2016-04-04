@@ -1,0 +1,340 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDR	h/com.h	14;"	d
+ASM	Makefile	/^ASM		=	nasm	$/;"	m
+ASMFLAG	Makefile	/^ASMFLAG		=	-f elf -g$/;"	m
+BLOCK_SIZ	h/const.h	6;"	d
+BOOT_DEV	h/const.h	42;"	d
+BUFFER	h/param.h	7;"	d
+BUF_SIZE	put.c	5;"	d	file:
+BYTE	h/const.h	62;"	d
+B_IMAP	h/const.h	24;"	d
+CC	Makefile	/^CC		=	gcc$/;"	m
+CCFLAG	Makefile	/^CCFLAG		=	-fno-builtin -g -c -nostdinc -I ..\/include$/;"	m
+CLEAN	h/const.h	29;"	d
+CMD_SIZE	buildin_cmd.c	17;"	d	file:
+CMD_SIZE	buildin_cmd.c	19;"	d	file:
+COUNT	h/com.h	12;"	d
+DELETE	h/const.h	75;"	d
+DEVICE	h/com.h	10;"	d
+DINODE_BLOCK_SIZE	h/buffer.h	8;"	d
+DIRECT_PER_BLOCK	h/const.h	15;"	d
+DIRSIZ	h/const.h	36;"	d
+DIRSIZ	h/inode.h	5;"	d
+DIRTY	h/const.h	28;"	d
+DIR_BLOCK	h/const.h	21;"	d
+DIR_FILE_TYPE	h/const.h	46;"	d
+END_INODE	h/inode.h	9;"	d
+ENTER	h/const.h	73;"	d
+EXTERN	h/const.h	4;"	d
+EXTERN	table.c	10;"	d	file:
+EXTERN	table.c	11;"	d	file:
+FD	h/param.h	6;"	d
+FILE_NAME_MAX	h/const.h	34;"	d
+FIRST_INODE	h/inode.h	8;"	d
+FS	Makefile	/^FS		=        fs$/;"	m
+FULL_DATA_BLOCK	h/const.h	23;"	d
+HASH_MASK	h/buffer.h	33;"	d
+IMAP	h/superblock.h	17;"	d
+INDIRE_BLOCK_SIZE	h/buffer.h	7;"	d
+INODE_BLOCK	h/const.h	20;"	d
+I_BLOCK_SPECIAL	h/inode.h	58;"	d
+I_CHAR_SPECIAL	h/inode.h	56;"	d
+I_DIRECTORY	h/inode.h	57;"	d
+I_REGULAR	h/inode.h	59;"	d
+I_TYPE	h/inode.h	60;"	d
+LD	Makefile	/^LD		=	ld$/;"	m
+LDFLAG	Makefile	/^LDFLAG		=	 -Ttext 0x2006000 -Tdata 0x200A000  -nostdlib  ..\/lib\/sys\/crt0.o  $/;"	m
+LIB	Makefile	/^LIB		=	..\/lib\/sys\/libsys.a ..\/lib\/user\/libc.a$/;"	m
+LIBFLAG	Makefile	/^LIBFLAG		=	-lsys$/;"	m
+LOOK_UP	h/const.h	74;"	d
+M1	h/param.h	12;"	d
+M2	h/param.h	11;"	d
+M3	h/param.h	10;"	d
+MAJOR	h/const.h	60;"	d
+MAP_BLOCK	h/const.h	22;"	d
+MAP_BLOCK	super.c	25;"	d	file:
+MAX	h/const.h	70;"	d
+MAX_BITMAP_BLOCK_SIZE	h/buffer.h	9;"	d
+MAX_BLOCK_SIZE	h/buffer.h	5;"	d
+MAX_DIR_SIZE	h/buffer.h	6;"	d
+MAX_PATH	h/const.h	58;"	d
+MAX_PATH_LENGTH	h/const.h	33;"	d
+MIN	h/const.h	69;"	d
+MINMOR	h/const.h	61;"	d
+NAME	h/param.h	13;"	d
+NAME_LENGTH	h/param.h	14;"	d
+NBYTES	h/param.h	8;"	d
+NIL_BUF	h/buffer.h	48;"	d
+NON_INODE	h/const.h	31;"	d
+NORMAL	h/const.h	19;"	d
+NORMAL_FILE_TYPE	h/const.h	47;"	d
+NORMAL_TYPE	h/const.h	49;"	d
+NOT_REVIVING	h/fproc.h	24;"	d
+NOT_SUSPENDED	h/fproc.h	22;"	d
+NO_BLOCK	h/const.h	13;"	d
+NO_DEV	h/const.h	12;"	d
+NO_DEV	h/const.h	26;"	d
+NO_USE	h/const.h	25;"	d
+NR_BUFS	h/buffer.h	4;"	d
+NR_BUF_HASH	h/buffer.h	32;"	d
+NR_DIR_ENTERS	h/inode.h	22;"	d
+NR_FDS	h/const.h	55;"	d
+NR_FILPS	h/const.h	57;"	d
+NR_INBLOCKS	h/inode.h	15;"	d
+NR_INODES	h/inode.h	14;"	d
+NR_INZONE0	h/inode.h	11;"	d
+NR_INZONE1	h/inode.h	12;"	d
+NR_INZONE2	h/inode.h	13;"	d
+NR_PROCS	h/const.h	56;"	d
+NR_SUPERS	h/const.h	11;"	d
+NR_ZONES	h/inode.h	10;"	d
+NULL	h/const.h	52;"	d
+OBJET	Makefile	/^OBJET		=	 .\/fs.o .\/put.o .\/table.o .\/super.o .\/cache.o \\$/;"	m
+PATHNAME	h/param.h	16;"	d
+POS	h/com.h	13;"	d
+PROC_NR	h/com.h	11;"	d
+PUT_DIR	h/const.h	38;"	d
+READING	h/const.h	17;"	d
+REMOVE_DIR	h/const.h	39;"	d
+REVIVING	h/fproc.h	25;"	d
+ROOT_DEV	h/const.h	41;"	d
+ROOT_DIR_TYPE	h/const.h	45;"	d
+ROOT_INODE	h/const.h	43;"	d
+RWX_BITS	h/param.h	15;"	d
+SECT_SIZ	h/const.h	8;"	d
+START_BLOCK	h/superblock.h	19;"	d
+START_BLOCK	super.c	26;"	d	file:
+SUPER_BLOCK	h/buffer.h	50;"	d
+SUPER_BLOCK_V3	h/const.h	9;"	d
+SUPER_OFFSET	h/const.h	10;"	d
+SUSPENDED	h/fproc.h	23;"	d
+SYS_GID	h/const.h	65;"	d
+SYS_UID	h/const.h	64;"	d
+WRITING	h/const.h	18;"	d
+XPIPE	h/const.h	67;"	d
+ZMAP	h/superblock.h	18;"	d
+ZONE_SIZ	h/const.h	7;"	d
+_BUFFER_H_	h/buffer.h	2;"	d
+_CONST_H_	h/const.h	2;"	d
+_INODE_H_	h/inode.h	2;"	d
+__COM_H__	h/com.h	2;"	d
+__DEV_H_	h/dev.h	2;"	d
+__FILE_H__	h/file.h	2;"	d
+__FPROC_H__	h/fproc.h	2;"	d
+__FS_PARAM_H__	h/param.h	2;"	d
+__GLO_H__	h/glo.h	2;"	d
+__SUPERBLOCK_H__	h/superblock.h	2;"	d
+__UTILITY_H__	h/utility.h	2;"	d
+_flush	put.c	/^void _flush()$/;"	f
+advance	path.c	/^struct inode* advance(struct inode* ip,  char* filename)$/;"	f
+alloc_bit	super.c	/^bit_t  alloc_bit(struct super_block *sp , int map , bit_t origin  )$/;"	f
+alloc_inode	inode.c	/^struct inode* alloc_inode( dev1_t dev)$/;"	f
+alloc_zone	cache.c	/^zone1_t  alloc_zone( dev1_t dev, u32_t z )$/;"	f
+b	h/buffer.h	/^      }b;$/;"	m	struct:buf	typeref:union:buf::__anon1
+b_bitmap	h/buffer.h	/^           bit_chunk      b_bitmap[MAX_BITMAP_BLOCK_SIZE] ;  \/\/ 位图块$/;"	m	union:buf::__anon1
+b_blocknr	h/buffer.h	/^    block1_t    b_blocknr;            \/\/  块号$/;"	m	struct:buf
+b_count	h/buffer.h	/^    char        b_count;              \/\/  块使用计数器$/;"	m	struct:buf
+b_data	h/buffer.h	/^           char           b_data[MAX_BLOCK_SIZE]          ;  \/\/ 普通数据块$/;"	m	union:buf::__anon1
+b_dev	h/buffer.h	/^    dev1_t      b_dev;                \/\/  设备号 major | minor$/;"	m	struct:buf
+b_dinode	h/buffer.h	/^           struct d_inode b_dinode[DINODE_BLOCK_SIZE]     ;  \/\/ i节点块$/;"	m	union:buf::__anon1	typeref:struct:buf::__anon1::d_inode
+b_dir	h/buffer.h	/^           struct direct  b_dir[MAX_DIR_SIZE]             ;  \/\/ 目录项块$/;"	m	union:buf::__anon1	typeref:struct:buf::__anon1::direct
+b_dirt	h/buffer.h	/^    char        b_dirt;               \/\/  块脏 或 块净$/;"	m	struct:buf
+b_hash_next	h/buffer.h	/^    struct buf *b_hash_next;          \/\/  hash表next指针$/;"	m	struct:buf	typeref:struct:buf::buf
+b_ind	h/buffer.h	/^           u32_t          b_ind[INDIRE_BLOCK_SIZE]        ;  \/\/ 间接寻址块$/;"	m	union:buf::__anon1
+b_next	h/buffer.h	/^    struct buf *b_next;               \/\/  缓冲双向链表的后向指针$/;"	m	struct:buf	typeref:struct:buf::buf
+b_prev	h/buffer.h	/^    struct buf *b_prev;               \/\/  缓冲双向链表的前驱指针$/;"	m	struct:buf	typeref:struct:buf::buf
+buf	h/buffer.h	/^EXTERN  struct buf *buf;$/;"	v	typeref:struct:buf
+buf	h/buffer.h	/^struct buf {$/;"	s
+buf_count	put.c	/^i32_t buf_count = 0 ;$/;"	v
+buf_hash	h/buffer.h	/^EXTERN struct buf *buf_hash[NR_BUF_HASH];$/;"	v	typeref:struct:buf
+buf_pool	fs.c	/^void buf_pool()$/;"	f
+bufs_in_use	h/buffer.h	/^EXTERN int    bufs_in_use;  \/\/ 在使用的缓冲$/;"	v
+buildin_command	buildin_cmd.c	/^struct buildin_command {$/;"	s	file:
+call_vector	table.c	/^i32_t  (*call_vector[NCALLS])()={$/;"	v
+copy	utility.c	/^void copy( u8_t *dest , u8_t *src , i32_t bytes )$/;"	f
+d_atime	h/inode.h	/^  time_t   d_atime;            \/\/ 最后一次访问时间$/;"	m	struct:d_inode
+d_ctime	h/inode.h	/^  time_t   d_ctime;            \/\/ 创建时间$/;"	m	struct:d_inode
+d_gid	h/inode.h	/^  u16_t    d_gid;              \/\/ 拥有者组id$/;"	m	struct:d_inode
+d_ino	h/inode.h	/^   ino1_t   d_ino;            \/\/ i节点号$/;"	m	struct:direct
+d_inode	h/inode.h	/^struct d_inode{$/;"	s
+d_mode	h/inode.h	/^  u16_t    d_mode;             \/\/ 文件类型或保护信息$/;"	m	struct:d_inode
+d_mtime	h/inode.h	/^  time_t   d_mtime;            \/\/ 最后一次的修改时间$/;"	m	struct:d_inode
+d_name	h/inode.h	/^   char   d_name[DIRSIZ];     \/\/ 文件名称$/;"	m	struct:direct
+d_nlinks	h/inode.h	/^  u16_t    d_nlinks;           \/\/ 多少个link指向此文件$/;"	m	struct:d_inode
+d_size	h/inode.h	/^  off1_t   d_size;             \/\/ 文件大小$/;"	m	struct:d_inode
+d_uid	h/inode.h	/^  u16_t    d_uid;              \/\/ 拥有者用户id$/;"	m	struct:d_inode
+d_zone	h/inode.h	/^  u32_t    d_zone[NR_ZONES];   \/\/ 块号以及索引块$/;"	m	struct:d_inode
+dev_close	device.c	/^i32_t dev_close( dev1_t dev )$/;"	f
+dev_io	device.c	/^i32_t  dev_io(i32_t rw_flag , dev1_t dev ,file_pos pos , i32_t nbytes , i32_t proc , u8_t *buf )$/;"	f
+dev_mess	device.c	/^message dev_mess ;$/;"	v
+dev_open	device.c	/^i32_t dev_open( dev1_t dev , i32_t mask )$/;"	f
+direct	h/inode.h	/^struct direct {$/;"	s
+dmap	h/dev.h	/^extern   struct dmap{$/;"	s
+dmap	table.c	/^struct  dmap  dmap[]={$/;"	v	typeref:struct:dmap
+dmap_close	h/dev.h	/^     i32_t  (*dmap_close)();$/;"	m	struct:dmap
+dmap_open	h/dev.h	/^     i32_t  (*dmap_open)();$/;"	m	struct:dmap
+dmap_rw	h/dev.h	/^     i32_t  (*dmap_rw)();$/;"	m	struct:dmap
+dmap_task	h/dev.h	/^     i32_t  dmap_task;$/;"	m	struct:dmap
+do_buildin	buildin_cmd.c	/^i32_t  do_buildin()$/;"	f
+do_close	open.c	/^i32_t do_close()$/;"	f
+do_creat	open.c	/^i32_t do_creat()$/;"	f
+do_dup	open.c	/^i32_t do_dup()$/;"	f
+do_exec	exec.c	/^i32_t do_exec()$/;"	f
+do_exit	misc.c	/^i32_t  do_exit()$/;"	f
+do_fork	fork.c	/^i32_t  do_fork()$/;"	f
+do_lseek	open.c	/^i32_t do_lseek()$/;"	f
+do_mknod	open.c	/^i32_t do_mknod()$/;"	f
+do_mount	mount.c	/^i32_t  do_mount()$/;"	f
+do_open	open.c	/^i32_t  do_open() $/;"	f
+do_read	read.c	/^i32_t  do_read()$/;"	f
+do_revive	misc.c	/^i32_t  do_revive()$/;"	f
+do_sync	misc.c	/^i32_t  do_sync()$/;"	f
+do_write	write.c	/^i32_t  do_write()$/;"	f
+dont_reply	h/glo.h	/^EXTERN  i32_t    dont_reply ;$/;"	v
+dup_inode	inode.c	/^void dup_inode( struct  inode *ip  )$/;"	f
+eat_path	path.c	/^struct inode*  eat_path(char *path )$/;"	f
+error_code	h/glo.h	/^EXTERN  i32_t    error_code ;$/;"	v
+executable	h/fproc.h	/^	struct  inode  *executable     ;    \/\/ 可执行文件节点$/;"	m	struct:fproc	typeref:struct:fproc::inode
+fetch_name	utility.c	/^i32_t  fetch_name( u8_t *str , i32_t len , i32_t  flag )$/;"	f
+file_pos	h/file.h	/^	file_pos        file_pos ;$/;"	m	struct:filp
+filp	h/file.h	/^EXTERN  struct filp{$/;"	s
+filp	h/file.h	/^}filp[NR_FILPS];$/;"	v	typeref:struct:filp
+filp_count	h/file.h	/^	i32_t           filp_count ;$/;"	m	struct:filp
+filp_ino	h/file.h	/^	struct  inode  *filp_ino ;$/;"	m	struct:filp	typeref:struct:filp::inode
+filp_mode	h/file.h	/^    mask_bits       filp_mode ;$/;"	m	struct:filp
+find_dev	device.c	/^void  find_dev( dev1_t dev  )$/;"	f
+find_filp	filedes.c	/^struct filp *find_filp( struct inode *rip , i32_t bits )$/;"	f
+flushall	cache.c	/^void flushall( dev1_t dev )$/;"	f
+fn	buildin_cmd.c	/^   i32_t (*fn)() ;$/;"	m	struct:buildin_command	file:
+forbidden	open.c	/^i32_t forbidden( struct inode *ip , i32_t mask , i32_t real_uid  )$/;"	f
+fp	h/glo.h	/^EXTERN  struct fproc *fp ;$/;"	v	typeref:struct:fproc
+fp_buffer	h/fproc.h	/^	u8_t*          fp_buffer       ;$/;"	m	struct:fproc
+fp_bytes	h/fproc.h	/^	i32_t          fp_bytes        ;$/;"	m	struct:fproc
+fp_effgid	h/fproc.h	/^	gid            fp_effgid       ;$/;"	m	struct:fproc
+fp_effuid	h/fproc.h	/^	uid            fp_effuid       ;$/;"	m	struct:fproc
+fp_fd	h/fproc.h	/^	i32_t          fp_fd           ;     \/\/ save fd $/;"	m	struct:fproc
+fp_filp	h/fproc.h	/^	struct  filp  *fp_filp[NR_FDS] ;$/;"	m	struct:fproc	typeref:struct:fproc::filp
+fp_realgid	h/fproc.h	/^	gid            fp_realgid      ;$/;"	m	struct:fproc
+fp_realuid	h/fproc.h	/^	uid            fp_realuid      ;$/;"	m	struct:fproc
+fp_revived	h/fproc.h	/^	u8_t           fp_revived      ;$/;"	m	struct:fproc
+fp_rootdir	h/fproc.h	/^	struct  inode *fp_rootdir      ;    \/\/ 根目录$/;"	m	struct:fproc	typeref:struct:fproc::inode
+fp_suspended	h/fproc.h	/^	u8_t           fp_suspended    ;$/;"	m	struct:fproc
+fp_task	h/fproc.h	/^	u8_t           fp_task         ;    \/\/ 任务号$/;"	m	struct:fproc
+fp_umask	h/fproc.h	/^	i32_t          fp_umask        ;$/;"	m	struct:fproc
+fp_workdir	h/fproc.h	/^	struct  inode *fp_workdir      ;    \/\/ 当前工作目录$/;"	m	struct:fproc	typeref:struct:fproc::inode
+fproc	h/fproc.h	/^EXTERN  struct fproc{$/;"	s
+fproc	h/fproc.h	/^}fproc[NR_PROCS];$/;"	v	typeref:struct:fproc
+free_bit	super.c	/^void   free_bit(struct super_block *sp, int map, bit_t  bit_releas)$/;"	f
+free_inode	inode.c	/^void free_inode( dev1_t dev, ino1_t inumb)$/;"	f
+free_zone	cache.c	/^void free_zone(dev1_t dev, u32_t z)$/;"	f
+front	h/buffer.h	/^EXTERN struct buf *front;   \/\/ 最久未使用空闲表$/;"	v	typeref:struct:buf
+fs_call	h/glo.h	/^EXTERN  i32_t    fs_call ;$/;"	v
+fs_cd	buildin_cmd.c	/^i32_t fs_cd()  $/;"	f
+fs_init	fs.c	/^void  fs_init()$/;"	f
+fs_ls	buildin_cmd.c	/^i32_t fs_ls()  $/;"	f
+fs_tty	h/fproc.h	/^	i32_t          fs_tty          ;$/;"	m	struct:fproc
+get_block	cache.c	/^struct buf*  get_block(dev1_t dev,  block1_t  block )$/;"	f
+get_fd	filedes.c	/^i32_t  get_fd( i32_t mask , i32_t *k , struct filp **fpt )$/;"	f
+get_filp	filedes.c	/^struct  filp *get_filp( i32_t fd )$/;"	f
+get_inode	inode.c	/^struct inode* get_inode(dev1_t dev,  ino1_t ino)$/;"	f
+get_name	path.c	/^void get_name( u8_t *oldpath , u8_t *newpath , u8_t *filename )$/;"	f
+get_work	fs.c	/^void get_work()$/;"	f
+getsuper	super.c	/^struct super_block* getsuper( dev1_t dev )$/;"	f
+i_atime	h/inode.h	/^  time_t   i_atime;            \/\/ 最后一次访问时间$/;"	m	struct:inode
+i_count	h/inode.h	/^  u32_t    i_count;            \/\/ 使用计数$/;"	m	struct:inode
+i_ctime	h/inode.h	/^  time_t   i_ctime;            \/\/ 创建时间$/;"	m	struct:inode
+i_dev	h/inode.h	/^  dev1_t   i_dev;              \/\/ 设备号$/;"	m	struct:inode
+i_dirty	h/inode.h	/^  u8_t     i_dirty;            \/\/ clean or dirty $/;"	m	struct:inode
+i_gid	h/inode.h	/^  u16_t    i_gid;              \/\/ 拥有者组id$/;"	m	struct:inode
+i_mode	h/inode.h	/^  u16_t    i_mode;             \/\/ 文件类型或保护信息$/;"	m	struct:inode
+i_mtime	h/inode.h	/^  time_t   i_mtime;            \/\/ 最后一次的修改时间$/;"	m	struct:inode
+i_nlinks	h/inode.h	/^  u16_t    i_nlinks;           \/\/ 多少个link指向此文件$/;"	m	struct:inode
+i_num	h/inode.h	/^  ino1_t   i_num;              \/\/ inode号$/;"	m	struct:inode
+i_size	h/inode.h	/^  off1_t   i_size;             \/\/ 文件大小$/;"	m	struct:inode
+i_sp	h/inode.h	/^  struct super_block *i_sp;    \/\/ 指向的超级块$/;"	m	struct:inode	typeref:struct:inode::super_block
+i_uid	h/inode.h	/^  u16_t    i_uid;              \/\/ 拥有者用户id$/;"	m	struct:inode
+i_zone	h/inode.h	/^  u32_t    i_zone[NR_ZONES];   \/\/ 块号以及索引块$/;"	m	struct:inode
+inner_cmd	buildin_cmd.c	/^struct buildin_command inner_cmd[CMD_SIZE]={$/;"	v	typeref:struct:buildin_command
+inode	h/inode.h	/^EXTERN struct inode{$/;"	s
+inode	h/inode.h	/^}inode[NR_INODES];$/;"	v	typeref:struct:inode
+last_dir	path.c	/^struct inode* last_dir(char *path, char *str)$/;"	f
+load_ram	fs.c	/^void load_ram()$/;"	f
+load_super	fs.c	/^void  load_super()$/;"	f
+look_up	path.c	/^ino1_t look_up(struct buf* bp, char *fname)$/;"	f
+m	h/glo.h	/^EXTERN  message  m    ;               \/\/ 接受消息$/;"	v
+m1	h/glo.h	/^EXTERN  message  m1   ;               \/\/ 消息发出$/;"	v
+main	fs.c	/^int main()$/;"	f
+major	device.c	/^i32_t  major , minor , task ;$/;"	v
+max_major	device.c	/^i32_t max_major = 3;$/;"	v
+minor	device.c	/^i32_t  major , minor , task ;$/;"	v
+name	buildin_cmd.c	/^   u8_t *name    ;$/;"	m	struct:buildin_command	file:
+name	path.c	/^char oldpath[MAX_PATH_LENGTH],name[FILE_NAME_MAX];$/;"	v
+new_block	write.c	/^struct buf *new_block( struct inode *ip , i32_t pos )$/;"	f
+new_node	open.c	/^struct inode *new_node( u8_t *path , i32_t filetype , i32_t zone_nr )$/;"	f
+no_call	device.c	/^i32_t no_call( i32_t task_nr , message *m_ptr )$/;"	f
+no_sys	utility.c	/^i32_t no_sys()$/;"	f
+oldpath	path.c	/^char oldpath[MAX_PATH_LENGTH],name[FILE_NAME_MAX];$/;"	v
+panic	utility.c	/^void panic( u8_t *str )$/;"	f
+pre_dir	path.c	/^void pre_dir(char *path,  char *predir, char *filename)$/;"	f
+print_buf	put.c	/^u8_t  print_buf[BUF_SIZE];$/;"	v
+put_block	cache.c	/^void put_block(struct buf * bp, int type)$/;"	f
+put_inode	inode.c	/^void put_inode( struct inode* ip)$/;"	f
+put_msg	put.c	/^message put_msg ;$/;"	v
+putc	put.c	/^void  putc( u8_t ch )$/;"	f
+pwd	h/glo.h	/^EXTERN  u8_t     pwd[MAX_PATH_LENGTH];$/;"	v
+read_map	read.c	/^i32_t  read_map( struct inode *rip , i32_t pos )$/;"	f
+read_write	read.c	/^i32_t  read_write( i32_t flag  )$/;"	f
+rear	h/buffer.h	/^EXTERN struct buf *rear;    \/\/ 最近使用的空闲表尾$/;"	v	typeref:struct:buf
+reply	fs.c	/^void  reply( i32_t whom , i32_t result )$/;"	f
+revive	pipe.c	/^void revive( i32_t proc , i32_t bytes )$/;"	f
+reviving	h/glo.h	/^EXTERN  i32_t    reviving   ;         \/\/ 需要唤醒的用户进程$/;"	v
+rm_lru	cache.c	/^void rm_lru(struct buf *bp)$/;"	f
+rw_block	cache.c	/^void rw_block(struct buf *bp, int rw_flag)$/;"	f
+rw_chunk	read.c	/^i32_t  rw_chunk( struct inode *rip , i32_t pos , i32_t off , i32_t chunk , i32_t flag ,u8_t *buf , i32_t proc )$/;"	f
+rw_dev	device.c	/^i32_t rw_dev( i32_t task_nr , message *m_ptr )$/;"	f
+rw_dev2	device.c	/^i32_t  rw_dev2( i32_t dummy , message *m_ptr )$/;"	f
+rw_inode	inode.c	/^void rw_inode(struct inode *ip , u8_t rw_flag)$/;"	f
+rw_super	super.c	/^void rw_super( struct  super_block *sp , i32_t rw_flag )$/;"	f
+rw_user	read.c	/^i32_t  rw_user( u8_t *bp , i32_t s , u8_t  *sbuf ,  i32_t count , i32_t direction   )$/;"	f
+s_block_size	h/superblock.h	/^  u16_t                 s_block_size;$/;"	m	struct:super_block
+s_dev	h/superblock.h	/^  dev1_t                s_dev;               \/\/ 设备号$/;"	m	struct:super_block
+s_dirty	h/superblock.h	/^  u8_t                  s_dirty ;$/;"	m	struct:super_block
+s_disk_version	h/superblock.h	/^  u8_t                  s_disk_version;$/;"	m	struct:super_block
+s_firstdatazone	h/superblock.h	/^  zone1_t  s_firstdatazone  ;          \/\/  第一个数据区域$/;"	m	struct:super_block
+s_imap_blocks	h/superblock.h	/^  u16_t    s_imap_blocks    ;          \/\/  i节点位图的大小 $/;"	m	struct:super_block
+s_imount	h/superblock.h	/^  struct inode          *s_imount;$/;"	m	struct:super_block	typeref:struct:super_block::inode
+s_inodes_per_block	h/superblock.h	/^  u32_t                 s_inodes_per_block;$/;"	m	struct:super_block
+s_isearch	h/superblock.h	/^  bit_t                 s_isearch;        \/* could use    *\/$/;"	m	struct:super_block
+s_isup	h/superblock.h	/^  struct inode          *s_isup;$/;"	m	struct:super_block	typeref:struct:super_block::inode
+s_log_zone_size	h/superblock.h	/^  u16_t    s_log_zone_size  ;          \/\/  log2 blocks\/zones $/;"	m	struct:super_block
+s_magic	h/superblock.h	/^  u16_t    s_magic          ;          \/\/  魔数$/;"	m	struct:super_block
+s_max_size	h/superblock.h	/^  off1_t   s_max_size       ;          \/\/  最大文件大小$/;"	m	struct:super_block
+s_native	h/superblock.h	/^  i32_t                 s_native;$/;"	m	struct:super_block
+s_ndzones	h/superblock.h	/^  i32_t                 s_ndzones;$/;"	m	struct:super_block
+s_nindirs	h/superblock.h	/^  i32_t                 s_nindirs;$/;"	m	struct:super_block
+s_ninodes	h/superblock.h	/^  ino1_t   s_ninodes        ;          \/\/  已使用的节点个数$/;"	m	struct:super_block
+s_nzones	h/superblock.h	/^  zone1_t  s_nzones         ;          \/\/  整个块设备的大小$/;"	m	struct:super_block
+s_pad	h/superblock.h	/^  u16_t    s_pad            ;          \/\/  未被使用$/;"	m	struct:super_block
+s_pad2	h/superblock.h	/^  i16_t                 s_pad2;$/;"	m	struct:super_block
+s_rd_only	h/superblock.h	/^  i32_t                 s_rd_only;$/;"	m	struct:super_block
+s_version	h/superblock.h	/^  i32_t                 s_version;$/;"	m	struct:super_block
+s_zmap_blocks	h/superblock.h	/^  u16_t    s_zmap_blocks    ;          \/\/  zone位图大小 $/;"	m	struct:super_block
+s_zones	h/superblock.h	/^  u32_t    s_zones          ;          \/\/  number f zones$/;"	m	struct:super_block
+s_zsearch	h/superblock.h	/^  bit_t                 s_zsearch;        \/* could use    *\/$/;"	m	struct:super_block
+search_dir	path.c	/^i32_t search_dir( struct inode *ldir_ptr , u8_t *str , i32_t *numb , i32_t flag )$/;"	f
+spsiz_disk	h/superblock.h	20;"	d
+super_block	h/superblock.h	/^EXTERN struct super_block {$/;"	s
+super_block	h/superblock.h	/^}super_block[NR_SUPERS];$/;"	v	typeref:struct:super_block
+super_user	h/glo.h	/^EXTERN  i32_t    super_user ;$/;"	v
+susp_count	h/glo.h	/^EXTERN  i32_t    susp_count ;$/;"	v
+suspend	pipe.c	/^void suspend( i32_t task )$/;"	f
+task	device.c	/^i32_t  major , minor , task ;$/;"	v
+truncate	open.c	/^i32_t truncate( struct inode *ip )$/;"	f
+user_path	h/glo.h	/^EXTERN  u8_t     user_path[MAX_PATH]; $/;"	v
+who	h/glo.h	/^EXTERN  i32_t    who  ;$/;"	v
+zero_block	cache.c	/^void zero_block( struct buf *bp )$/;"	f

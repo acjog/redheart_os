@@ -1,0 +1,10 @@
+plugin_ctrl: unmapped=1, biosdev=1, speaker=1, extfpuirq=1, parallel=1, serial=1
+config_interface: textconfig
+display_library: x
+memory: host=32, guest=32
+romimage: file="/usr/local/bochs/share/bochs/BIOS-bochs-latest"
+vgaromimage: file="/usr/local/bochs/share/bochs/VGABIOS-lgpl-latest"
+boot: floppy
+floppy_bootsig_check: disabled=0
+floppya:1_44=./a.img,status=inserted
+ata0-master: type=disk, path="c.img", mode=flat

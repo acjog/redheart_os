@@ -1,0 +1,27 @@
+#restart 
+b  0x7c00
+#b 0x357eb
+#clock_int
+#interrupt 
+#save
+#floppy funcion 
+# seek
+#b 0x33079
+# transfer 
+#b 0x329fc
+#sys call
+# dma_setup
+#b 0x32b74
+# allow debug int
+#show int
+# floppy 
+#c
+# tty
+#c
+# mem
+#c
+# clock
+#c
+#  sys
+c
+#b 0x344b1
