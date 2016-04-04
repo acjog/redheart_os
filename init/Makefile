@@ -4,7 +4,7 @@ CC		=	gcc
 CCFLAG		=	-fno-builtin -g -c -m32  -march=i686 -fno-stack-protector -nostdinc -I ../include
 LD		=	ld
 #这个程序的入口地址为6M+24k 
-LDFLAG		=	 -melf_i386 -Ttext 0x906000 -Tdata 0x907000 -nostdlib -L ../lib/sys  ../lib/sys/libcrt0.a
+LDFLAG		=	 -melf_i386 -g  -Ttext 0x906000 -Tdata 0x907000 -nostdlib -L ../lib/sys  ../lib/sys/libcrt0.a
 
 INIT		=        init
 OBJET		=	 ./init.o ./put.o

@@ -61,7 +61,7 @@ debug		     : all
 #	          cp  init/init       ./debug_d
 			  cp  dg_kernel.bin  ./debug_d
 #			  cp   lib/command/echo ./debug_d
-		      gbochs -qf gbochsrc 2> bochs_gdb.txt  &
+			 /usr/local/bochs_2.6_new/bin/bochs  -qf ./gbochsrc_new  -rc bochsrc_cmdrc &
 		      gdb 
 debug0		      : all
 		      dbochs -qf bochsrc1 -rc bochsrc_cmdrc

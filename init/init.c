@@ -49,7 +49,7 @@ int main()
     //执行shell 
     while ( TRUE )
     {
-       printf("localhost@thinks>");
+       printf("dream@cosx>");
        read(STDIN,cmdline, 256);
        #ifdef _INIT_DEBUG
        printf( cmdline );
